@@ -1,5 +1,6 @@
-<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
-<jasperReport name="case labels A6" language="java" printOrder="Horizontal" pageWidth="425" pageHeight="283" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="425" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e66e3e9a-1740-4952-83db-04fea9cda762">
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.1.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="case labels A6" printOrder="Horizontal" pageWidth="425" pageHeight="283" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="425" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e66e3e9a-1740-4952-83db-04fea9cda762">
 	<property name="ireport.zoom" value="4.715895382000055"/>
 	<property name="ireport.x" value="349"/>
 	<property name="ireport.y" value="87"/>
@@ -9,116 +10,146 @@
 	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="591"/>
 	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="402"/>
 	<property name="net.sf.jasperreports.style.evaluation.time.enabled" value="true"/>
-	<style name="textStyle" default="true" hTextAlign="Left" blankWhenNull="true" fontName="Arial" fontSize="10.0"/>
-	<style name="Barcode" hTextAlign="Justified" vTextAlign="Middle" hImageAlign="Right" vImageAlign="Middle"/>
-	<style name="Caption" style="textStyle" fontSize="12.0" bold="true"/>
-	<style name="Fields" style="textStyle" bold="false"/>
-	<style name="CaseName" style="textStyle" vTextAlign="Top" bold="true"/>
-	<style name="ClientCompany" style="textStyle" bold="false">
-		<conditionalStyle fontSize="12.0">
+	<style name="textStyle" isDefault="true" hTextAlign="Left" isBlankWhenNull="true" fontName="Arial" fontSize="10"/>
+	<style name="Barcode" hTextAlign="Justified" hImageAlign="Right" vTextAlign="Middle" vImageAlign="Middle"/>
+	<style name="Caption" style="textStyle" fontSize="12" isBold="true"/>
+	<style name="Fields" style="textStyle" isBold="false"/>
+	<style name="CaseName" style="textStyle" vTextAlign="Top" isBold="true"/>
+	<style name="ClientCompany" style="textStyle" isBold="false">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{client_company}.length() < 22]]></conditionExpression>
+			<style fontSize="12"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="11.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{client_company}.length() < 25 && $F{client_company}.length() > 21]]></conditionExpression>
+			<style fontSize="11"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="10.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{client_company}.length() < 28 && $F{client_company}.length() > 24]]></conditionExpression>
+			<style fontSize="10"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="9.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{client_company}.length() < 31 && $F{client_company}.length() > 27]]></conditionExpression>
+			<style fontSize="9"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="8.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{client_company}.length() < 36 && $F{client_company}.length() > 30]]></conditionExpression>
+			<style fontSize="8"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="7.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{client_company}.length() < 43 && $F{client_company}.length() > 35]]></conditionExpression>
+			<style fontSize="7"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="6.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{client_company}.length() < 52 && $F{client_company}.length() > 42]]></conditionExpression>
+			<style fontSize="6"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="5.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{client_company}.length() > 51]]></conditionExpression>
+			<style fontSize="5"/>
 		</conditionalStyle>
 	</style>
-	<style name="VenueCompany" style="textStyle" bold="false">
-		<conditionalStyle fontSize="12.0">
+	<style name="VenueCompany" style="textStyle" isBold="false">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{venue_company}.length() < 22]]></conditionExpression>
+			<style fontSize="12"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="11.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{venue_company}.length() < 25 && $F{venue_company}.length() > 21]]></conditionExpression>
+			<style fontSize="11"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="10.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{venue_company}.length() < 28 && $F{venue_company}.length() > 24]]></conditionExpression>
+			<style fontSize="10"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="9.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{venue_company}.length() < 31 && $F{venue_company}.length() > 27]]></conditionExpression>
+			<style fontSize="9"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="8.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{venue_company}.length() < 36 && $F{venue_company}.length() > 30]]></conditionExpression>
+			<style fontSize="8"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="7.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{venue_company}.length() < 43 && $F{venue_company}.length() > 35]]></conditionExpression>
+			<style fontSize="7"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="6.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{venue_company}.length() < 52 && $F{venue_company}.length() > 42]]></conditionExpression>
+			<style fontSize="6"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="5.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{venue_company}.length() > 51]]></conditionExpression>
+			<style fontSize="5"/>
 		</conditionalStyle>
 	</style>
-	<style name="StartDateCaption" style="Caption" bold="true">
-		<conditionalStyle fontSize="12.0">
+	<style name="StartDateCaption" style="Caption" isBold="true">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{planned_start_date_caption}.length() < 13]]></conditionExpression>
+			<style fontSize="12"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="11.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{planned_start_date_caption}.length() < 16 && $F{planned_start_date_caption}.length() > 12]]></conditionExpression>
+			<style fontSize="11"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="10.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{planned_start_date_caption}.length() < 19 && $F{planned_start_date_caption}.length() > 15]]></conditionExpression>
+			<style fontSize="10"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="9.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{planned_start_date_caption}.length() < 22 && $F{planned_start_date_caption}.length() > 18]]></conditionExpression>
+			<style fontSize="9"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="8.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{planned_start_date_caption}.length() > 21]]></conditionExpression>
+			<style fontSize="8"/>
 		</conditionalStyle>
 	</style>
-	<style name="EndDateCaption" style="Caption" bold="true">
-		<conditionalStyle fontSize="12.0">
+	<style name="EndDateCaption" style="Caption" isBold="true">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{planned_end_date_caption}.length() < 13]]></conditionExpression>
+			<style fontSize="12"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="11.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{planned_end_date_caption}.length() < 16 && $F{planned_end_date_caption}.length() > 12]]></conditionExpression>
+			<style fontSize="11"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="10.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{planned_end_date_caption}.length() < 19 && $F{planned_end_date_caption}.length() > 15]]></conditionExpression>
+			<style fontSize="10"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="9.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{planned_end_date_caption}.length() < 22 && $F{planned_end_date_caption}.length() > 18]]></conditionExpression>
+			<style fontSize="9"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="8.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$F{planned_end_date_caption}.length() > 21]]></conditionExpression>
+			<style fontSize="8"/>
 		</conditionalStyle>
 	</style>
 	<style name="Detail" style="textStyle">
-		<conditionalStyle fontSize="8.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$P{list_count}+$P{long_list} > 20 && $P{list_count}+$P{long_list} <= 25]]></conditionExpression>
+			<style fontSize="8"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="7.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$P{list_count}+$P{long_list} > 25 && $P{list_count}+$P{long_list} <= 35]]></conditionExpression>
+			<style fontSize="7"/>
 		</conditionalStyle>
-		<conditionalStyle fontSize="6.0">
+		<conditionalStyle>
 			<conditionExpression><![CDATA[$P{list_count}+$P{long_list} > 35]]></conditionExpression>
+			<style fontSize="6"/>
 		</conditionalStyle>
 	</style>
-	<style name="ElementName" style="textStyle" vTextAlign="Middle" bold="true"/>
-	<dataset name="Contents" uuid="38765270-f855-439a-a172-2c5e25a18097">
+	<style name="ElementName" style="textStyle" vTextAlign="Middle" isBold="true"/>
+	<subDataset name="Contents" uuid="38765270-f855-439a-a172-2c5e25a18097">
 		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="swdev_dev"/>
 		<parameter name="LINE_ITEM_ID" class="java.lang.String"/>
 		<parameter name="list_count" class="java.lang.Integer"/>
 		<parameter name="long_list" class="java.lang.Integer"/>
-		<query language="SQL"><![CDATA[SELECT
+		<queryString language="SQL">
+			<![CDATA[SELECT
 sum(litem.qty) as qty,
 item_man_res.resource_name,
 ivt_item.item_size,
@@ -138,7 +169,8 @@ LEFT JOIN st_biz_custom_field_def as cf_def on (cf_def.id = biz_cf_value.custom_
 WHERE cf_value.resource_id = ivt_item.id 
 AND cf_def.field_id='exclude_from_case_labels'),'false') = 'false' 
 group by ivt_item.id
-ORDER BY resource_name, CAST(item_size AS DECIMAL)]]></query>
+ORDER BY resource_name, CAST(item_size AS DECIMAL)]]>
+		</queryString>
 		<field name="qty" class="java.lang.Integer">
 			<property name="com.jaspersoft.studio.field.name" value="qty"/>
 			<property name="com.jaspersoft.studio.field.label" value="qty"/>
@@ -151,30 +183,33 @@ ORDER BY resource_name, CAST(item_size AS DECIMAL)]]></query>
 		<field name="item_size" class="java.lang.String"/>
 		<field name="short_hand" class="java.lang.String"/>
 		<variable name="line_limit" class="java.lang.Integer">
-			<expression><![CDATA[(($P{list_count}+$P{long_list})/2)-1]]></expression>
+			<variableExpression><![CDATA[(($P{list_count}+$P{long_list})/2)-1]]></variableExpression>
 		</variable>
-		<variable name="line count" calculation="Sum" class="java.lang.Integer">
-			<expression><![CDATA[new Integer(new java.text.DecimalFormat("0").format(new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",0,($P{list_count}+$P{long_list} > 25 ? 7 : 8))).stringWidth($F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))))) > 185 ? 2 : 1]]></expression>
+		<variable name="line count" class="java.lang.Integer" calculation="Sum">
+			<variableExpression><![CDATA[new Integer(new java.text.DecimalFormat("0").format(new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",0,($P{list_count}+$P{long_list} > 25 ? 7 : 8))).stringWidth($F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))))) > 185 ? 2 : 1]]></variableExpression>
 		</variable>
-	</dataset>
-	<dataset name="Logo" uuid="3e40f789-4500-47e8-b451-4c5e05eb82ab">
+	</subDataset>
+	<subDataset name="Logo" uuid="3e40f789-4500-47e8-b451-4c5e05eb82ab">
 		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="live_dev"/>
-		<query language="SQL"><![CDATA[select blobhandle from rh_images where caption LIKE 'Case Logo%' ORDER BY upload_date DESC LIMIT 1]]></query>
+		<queryString language="SQL">
+			<![CDATA[select blobhandle from rh_images where caption LIKE 'Case Logo%' ORDER BY upload_date DESC LIMIT 1]]>
+		</queryString>
 		<field name="blobhandle" class="java.io.InputStream">
 			<property name="com.jaspersoft.studio.field.name" value="blobhandle"/>
 			<property name="com.jaspersoft.studio.field.label" value="blobhandle"/>
 			<property name="com.jaspersoft.studio.field.tree.path" value="rh_images"/>
 		</field>
-	</dataset>
-	<dataset name="ManifestLabels" uuid="b1d83af7-90fe-4896-8fba-540858527f98">
+	</subDataset>
+	<subDataset name="ManifestLabels" uuid="b1d83af7-90fe-4896-8fba-540858527f98">
 		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="swdev_dev"/>
 		<parameter name="PROJECT_ELEMENT_ID" class="java.lang.String"/>
 		<parameter name="DATE_FORMAT" class="java.lang.String"/>
 		<parameter name="manifest_label_copies" class="java.lang.String"/>
-		<parameter name="DateFormatter" forPrompting="false" class="java.text.DateFormat"/>
-		<query language="SQL"><![CDATA[SELECT 
+		<parameter name="DateFormatter" class="java.text.DateFormat" isForPrompting="false"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT 
        prj_el_def.name_singular,
        prj.element_name,
        prj.document_number,
@@ -257,7 +292,8 @@ WHERE prj.id = $P{PROJECT_ELEMENT_ID}
 -- prj.id = 'cda845f0-2a45-11ec-ae74-5600033cba12'
 -- prj.id = '1790c130-2bcf-11ec-ae74-5600033cba12'
 
-AND $P{manifest_label_copies} >= nums.num]]></query>
+AND $P{manifest_label_copies} >= nums.num]]>
+		</queryString>
 		<field name="name_singular" class="java.lang.String">
 			<property name="com.jaspersoft.studio.field.name" value="name_singular"/>
 			<property name="com.jaspersoft.studio.field.label" value="name_singular"/>
@@ -333,11 +369,11 @@ AND $P{manifest_label_copies} >= nums.num]]></query>
 			<property name="com.jaspersoft.studio.field.name" value="manifest_label_notes"/>
 			<property name="com.jaspersoft.studio.field.label" value="manifest_label_notes"/>
 		</field>
-	</dataset>
-	<parameter name="DATE_FORMAT" forPrompting="false" class="java.lang.String">
+	</subDataset>
+	<parameter name="DATE_FORMAT" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["dd/MM/yy"]]></defaultValueExpression>
 	</parameter>
-	<parameter name="DateFormatter" forPrompting="false" class="java.text.DateFormat">
+	<parameter name="DateFormatter" class="java.text.DateFormat" isForPrompting="false">
 		<defaultValueExpression><![CDATA[$P{REPORT_FORMAT_FACTORY}.createDateFormat($P{DATE_FORMAT},$P{REPORT_LOCALE}, $P{REPORT_TIME_ZONE})]]></defaultValueExpression>
 	</parameter>
 	<parameter name="PROJECT_ELEMENT_ID" class="java.lang.String">
@@ -351,7 +387,8 @@ AND $P{manifest_label_copies} >= nums.num]]></query>
 	</parameter>
 	<parameter name="case_barcode" class="java.lang.String"/>
 	<parameter name="PRINT_ORPHAN_LABELS" class="java.lang.String"/>
-	<query language="sql"><![CDATA[SELECT *
+	<queryString>
+		<![CDATA[SELECT *
 FROM
   (  SELECT 
   eqlitem.prep_quantity,
@@ -493,26 +530,27 @@ WHERE $P{case_label_copies} >= nums2.num -- multiply as defined by
 HAVING CASE WHEN  $P{PRINT_ORPHAN_LABELS} = 'true' THEN 1 ELSE list_count > 0 END
 
 
-ORDER by ordinal ASC]]></query>
+ORDER by ordinal ASC]]>
+	</queryString>
 	<field name="line_item_id" class="java.lang.String"/>
 	<field name="top_level_item" class="java.lang.Integer"/>
 	<field name="name_singular" class="java.lang.String">
-		<description><![CDATA[]]></description>
 		<property name="com.jaspersoft.studio.field.name" value="name_singular"/>
 		<property name="com.jaspersoft.studio.field.label" value="name_singular"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_element_definition"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="element_name" class="java.lang.String">
-		<description><![CDATA[]]></description>
 		<property name="com.jaspersoft.studio.field.name" value="element_name"/>
 		<property name="com.jaspersoft.studio.field.label" value="element_name"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_project_element"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="document_number" class="java.lang.String">
-		<description><![CDATA[]]></description>
 		<property name="com.jaspersoft.studio.field.name" value="document_number"/>
 		<property name="com.jaspersoft.studio.field.label" value="document_number"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_project_element"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="description" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="resource_name"/>
@@ -526,10 +564,10 @@ ORDER by ordinal ASC]]></query>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_managed_resource"/>
 	</field>
 	<field name="stencil" class="java.lang.String">
-		<description><![CDATA[]]></description>
 		<property name="com.jaspersoft.studio.field.name" value="stencil"/>
 		<property name="com.jaspersoft.studio.field.label" value="stencil"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_ivt_serial_number"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="clientCaption" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="client_caption"/>
@@ -552,28 +590,28 @@ ORDER by ordinal ASC]]></query>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_crm_contact"/>
 	</field>
 	<field name="planned_start_date_caption" class="java.lang.String">
-		<description><![CDATA[]]></description>
 		<property name="com.jaspersoft.studio.field.name" value="planned_start_date_caption"/>
 		<property name="com.jaspersoft.studio.field.label" value="planned_start_date_caption"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_element_definition"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="planned_start_date" class="java.sql.Timestamp">
-		<description><![CDATA[]]></description>
 		<property name="com.jaspersoft.studio.field.name" value="planned_start_date"/>
 		<property name="com.jaspersoft.studio.field.label" value="planned_start_date"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_project_element"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="planned_end_date_caption" class="java.lang.String">
-		<description><![CDATA[]]></description>
 		<property name="com.jaspersoft.studio.field.name" value="planned_end_date_caption"/>
 		<property name="com.jaspersoft.studio.field.label" value="planned_end_date_caption"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_element_definition"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="planned_end_date" class="java.sql.Timestamp">
-		<description><![CDATA[]]></description>
 		<property name="com.jaspersoft.studio.field.name" value="planned_end_date"/>
 		<property name="com.jaspersoft.studio.field.label" value="planned_end_date"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_project_element"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="list_count" class="java.lang.Integer"/>
 	<field name="long_list" class="java.lang.Integer"/>
@@ -587,10 +625,10 @@ ORDER by ordinal ASC]]></query>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_unit_of_measure"/>
 	</field>
 	<field name="web_site" class="java.lang.String">
-		<description><![CDATA[]]></description>
 		<property name="com.jaspersoft.studio.field.name" value="web_site"/>
 		<property name="com.jaspersoft.studio.field.label" value="web_site"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_corp_identity"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="corp_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="company_name"/>
@@ -609,10 +647,10 @@ ORDER by ordinal ASC]]></query>
 	</field>
 	<field name="biz_loc_addr" class="java.lang.String"/>
 	<field name="time_zone" class="java.lang.String">
-		<description><![CDATA[]]></description>
 		<property name="com.jaspersoft.studio.field.name" value="time_zone"/>
 		<property name="com.jaspersoft.studio.field.label" value="time_zone"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_location"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="client_override" class="java.lang.String"/>
 	<field name="venue_override" class="java.lang.String"/>
@@ -623,559 +661,575 @@ ORDER by ordinal ASC]]></query>
 		<property name="com.jaspersoft.studio.field.tree.path" value="rh_images"/>
 	</field>
 	<variable name="DateTimeFormatter" class="java.text.DateFormat">
-		<expression><![CDATA[$P{REPORT_FORMAT_FACTORY}.createDateFormat("dd/MM/yy ",$P{REPORT_LOCALE}, TimeZone.getTimeZone($F{time_zone}))]]></expression>
+		<variableExpression><![CDATA[$P{REPORT_FORMAT_FACTORY}.createDateFormat("dd/MM/yy ",$P{REPORT_LOCALE}, TimeZone.getTimeZone($F{time_zone}))]]></variableExpression>
 	</variable>
-	<variable name="Case_count" calculation="DistinctCount" class="java.lang.Integer">
-		<expression><![CDATA[$F{top_level_item} == 1 ? $V{REPORT_COUNT} : null]]></expression>
+	<variable name="Case_count" class="java.lang.Integer" calculation="DistinctCount">
+		<variableExpression><![CDATA[$F{top_level_item} == 1 ? $V{REPORT_COUNT} : null]]></variableExpression>
 	</variable>
 	<variable name="CaseNameFontSize" class="java.lang.String">
-		<expression><![CDATA[new Integer(Math.min(((int)(Math.floor(370 / (new Double((new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",1,16)).stringWidth($F{description})))/16)))),(int)22)).toString()]]></expression>
+		<variableExpression><![CDATA[new Integer(Math.min(((int)(Math.floor(370 / (new Double((new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",1,16)).stringWidth($F{description})))/16)))),(int)22)).toString()]]></variableExpression>
 	</variable>
 	<group name="parentCase">
-		<expression><![CDATA[$F{parentDescription}]]></expression>
+		<groupExpression><![CDATA[$F{parentDescription}]]></groupExpression>
 	</group>
-	<background height="283">
-		<element kind="frame" uuid="dcd0bb54-8cde-41f5-8cf3-7c8c2f2dde79" x="12" y="251" width="81" height="21">
-			<property name="ShowOutOfBoundContent" value="true"/>
-			<element kind="component" uuid="749ad387-86c1-4913-b4ef-d5b91881ec60" x="0" y="0" width="81" height="21">
-				<component kind="list" printOrder="Vertical">
-					<datasetRun uuid="d886ed4f-da00-4bf9-8c58-eda9407f35f1" subDataset="Logo">
-						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-					</datasetRun>
-					<contents height="21" width="81">
-						<element kind="image" uuid="46cfec4d-bc48-4289-8ace-fe596ae792e5" x="0" y="0" width="81" height="21" scaleImage="RetainShape" onErrorType="Blank" usingCache="true" lazy="true" hImageAlign="Center" vImageAlign="Middle">
-							<expression><![CDATA[$F{blobhandle}]]></expression>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
-							<property name="com.jaspersoft.studio.unit.y" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						</element>
-					</contents>
-				</component>
-			</element>
-		</element>
+	<background>
+		<band height="283">
+			<frame>
+				<reportElement x="12" y="251" width="81" height="21" uuid="dcd0bb54-8cde-41f5-8cf3-7c8c2f2dde79">
+					<property name="ShowOutOfBoundContent" value="true"/>
+				</reportElement>
+				<componentElement>
+					<reportElement x="0" y="0" width="81" height="21" uuid="749ad387-86c1-4913-b4ef-d5b91881ec60"/>
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+						<datasetRun subDataset="Logo" uuid="d886ed4f-da00-4bf9-8c58-eda9407f35f1">
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+						<jr:listContents height="21" width="81">
+							<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle" isUsingCache="true" isLazy="true" onErrorType="Blank">
+								<reportElement x="0" y="0" width="81" height="21" uuid="46cfec4d-bc48-4289-8ace-fe596ae792e5">
+									<property name="com.jaspersoft.studio.unit.height" value="px"/>
+									<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									<property name="com.jaspersoft.studio.unit.y" value="px"/>
+									<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								</reportElement>
+								<imageExpression><![CDATA[$F{blobhandle}]]></imageExpression>
+							</image>
+						</jr:listContents>
+					</jr:list>
+				</componentElement>
+			</frame>
+		</band>
 	</background>
-	<title height="283">
-		<element kind="component" uuid="7956a1a9-be80-420c-b641-52fb8db2639b" x="0" y="0" width="425" height="283" removeLineWhenBlank="true">
-			<printWhenExpression><![CDATA[$P{case_barcode} == null || $P{case_barcode}.trim().equals("")]]></printWhenExpression>
-			<component kind="list" printOrder="Vertical">
-				<datasetRun uuid="7740ec12-f24e-4b3c-a6a3-becade30210d" subDataset="ManifestLabels">
-					<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
-					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-				</datasetRun>
-				<contents height="283" width="425">
-					<element kind="textField" uuid="eefdb3ab-520f-462e-a1dd-d9a587b09285" x="10" y="10" width="100" height="12" bold="true">
-						<expression><![CDATA[$F{name_singular}.toUpperCase() + ":"]]></expression>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					</element>
-					<element kind="textField" uuid="c7f0f7d7-6ee9-420c-b407-50185bb2e344" x="10" y="38" width="100" height="12" bold="true">
-						<expression><![CDATA[$F{clientCaption}.toUpperCase() + " / JOB:"]]></expression>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</element>
-					<element kind="textField" uuid="bd70d542-caba-4238-b8f0-9719e7b8bc66" x="10" y="95" width="100" height="12" bold="true">
-						<expression><![CDATA[$F{venueCaption}.toUpperCase() + ":"]]></expression>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</element>
-					<element kind="staticText" uuid="9471056f-13af-4711-885c-167b5461b60e" x="10" y="165" width="100" height="12" bold="true">
-						<text><![CDATA[NOTES:]]></text>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</element>
-					<element kind="textField" uuid="d4351a4f-3a49-4cb8-84ee-6b1aa115ef4a" x="10" y="235" width="100" height="12" bold="true">
-						<expression><![CDATA[$F{planned_start_date_caption}.toUpperCase() + ":"]]></expression>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					</element>
-					<element kind="textField" uuid="25fca19c-69d8-4ad8-a369-d3fd973e9420" x="216" y="235" width="100" height="12" bold="true">
-						<expression><![CDATA[$F{planned_end_date_caption}.toUpperCase() + ":"]]></expression>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					</element>
-					<element kind="line" uuid="6c10530b-e87e-4df3-bffe-e9f84cb8e603" x="7" y="35" width="411" height="1">
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<pen lineWidth="0.5"/>
-					</element>
-					<element kind="line" uuid="86a11803-5838-498a-911c-b911b037f76a" x="7" y="92" width="411" height="1">
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<pen lineWidth="0.5"/>
-					</element>
-					<element kind="line" uuid="69b5b901-cd4f-491d-8578-036ce24ee253" x="7" y="162" width="411" height="1">
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<pen lineWidth="0.5"/>
-					</element>
-					<element kind="line" uuid="38811f7e-c5ed-48bd-9f83-b8b3ee1df007" x="7" y="233" width="411" height="1">
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<pen lineWidth="0.5"/>
-					</element>
-					<element kind="line" uuid="f87b4e11-1694-4d1a-b152-9b704700d27c" x="7" y="248" width="411" height="1">
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<pen lineWidth="0.5"/>
-					</element>
-					<element kind="line" uuid="f6636ad0-a9ae-4734-a87b-529a4423dad8" x="212" y="233" width="1" height="15">
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<pen lineWidth="0.5"/>
-					</element>
-					<element kind="textField" uuid="9248ede8-aee9-4d73-8b20-0899194a20aa" x="10" y="22" width="405" height="12" printWhenDetailOverflows="true" bold="false" hTextAlign="Left" style="ElementName">
-						<expression><![CDATA[$F{element_name}]]></expression>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</element>
-					<element kind="textField" uuid="cc0b0b5e-e457-4d74-96fb-3836378dd353" x="330" y="10" width="58" height="12" bold="true" hTextAlign="Right">
-						<expression><![CDATA[$F{document_number}]]></expression>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</element>
-					<element kind="textField" uuid="70d509e0-99c8-40c4-bcb9-d67bb6a35670" x="10" y="51" width="405" height="42" printWhenDetailOverflows="true" bold="false" vTextAlign="Top" style="ElementName">
-						<paragraph lineSpacing="Proportional" lineSpacingSize="1.3" style="ElementName"/>
-						<expression><![CDATA[$F{client_override}.equals("") ? $F{client_company} : $F{client_override}]]></expression>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</element>
-					<element kind="textField" uuid="e5439183-1ce4-466f-87cc-676ba69e8442" x="10" y="108" width="405" height="55" printWhenDetailOverflows="true" bold="false" vTextAlign="Top" style="ElementName">
-						<paragraph lineSpacing="Proportional" lineSpacingSize="1.3" style="ElementName"/>
-						<expression><![CDATA[$F{venue_override}.equals("") ? $F{venue_company} : $F{venue_override}]]></expression>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</element>
-					<element kind="textField" uuid="b812e271-4f36-41f4-8f97-0ac502bbb20e" x="10" y="178" width="405" height="51" printWhenDetailOverflows="true" bold="false" vTextAlign="Top" style="ElementName">
-						<paragraph lineSpacing="Proportional" lineSpacingSize="1.4" style="ElementName"/>
-						<expression><![CDATA[$F{notes}]]></expression>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</element>
-					<element kind="textField" uuid="4e2ece90-5781-4323-bcef-00d64f358696" x="119" y="235" width="90" height="12" bold="false">
-						<expression><![CDATA[$F{planned_start_date}]]></expression>
-						<patternExpression><![CDATA[$P{DATE_FORMAT}]]></patternExpression>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					</element>
-					<element kind="textField" uuid="8eec9907-2b95-4003-b96a-f90313aaf153" x="324" y="235" width="90" height="12" bold="false">
-						<expression><![CDATA[$F{planned_end_date}]]></expression>
-						<patternExpression><![CDATA[$P{DATE_FORMAT}]]></patternExpression>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					</element>
-					<element kind="component" uuid="10537091-e43f-490f-a0bf-230a788cb539" x="325" y="9" width="98" height="16" style="Barcode">
-						<component kind="barbecue" type="Code128" drawText="false" checksumRequired="false" barWidth="2" barHeight="30">
-							<codeExpression><![CDATA[$F{document_number}]]></codeExpression>
-						</component>
-						<property name="com.jaspersoft.studio.unit.barWidth" value="px"/>
-						<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
-						<property name="net.sf.jasperreports.style.hImageAlign" value="Right"/>
-						<property name="net.sf.jasperreports.style.hTextAlign" value="Right"/>
-					</element>
-					<element kind="textField" uuid="edc2f19d-6f2e-4827-a353-e784f502375b" x="325" y="23" width="98" height="12" bold="true" hTextAlign="Center">
-						<expression><![CDATA[$F{document_number}]]></expression>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</element>
-					<element kind="rectangle" uuid="d45767da-f37c-4794-bdc2-ab96499cad5b" mode="Transparent" x="7" y="7" width="411" height="269" radius="3">
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<pen lineWidth="1.0"/>
-					</element>
-					<element kind="textField" uuid="33130b42-fed3-4f16-83fe-6b28157752eb" x="81" y="251" width="179" height="21" forecolor="#000000" fontSize="9.0" bold="false" vTextAlign="Middle">
-						<expression><![CDATA[$F{biz_loc_addr} + "\n" + $F{corp_phone} + ($F{web_site} != null ?  " - " + $F{web_site} : "")]]></expression>
-						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					</element>
-					<element kind="image" uuid="fb82b1e7-6722-494f-b443-bb7cc9e7711d" x="10" y="251" width="70" height="21" hImageAlign="Center" vImageAlign="Middle">
-						<expression><![CDATA[$F{logo_image_blob}]]></expression>
-					</element>
-				</contents>
-			</component>
-			<property name="com.jaspersoft.studio.unit.x" value="px"/>
-			<property name="com.jaspersoft.studio.unit.y" value="px"/>
-			<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-		</element>
-	</title>
+	<!-- TourLabel Page -->
 	<detail>
 		<band height="283" splitType="Stretch">
-			<printWhenExpression><![CDATA[$P{case_barcode} == null || $P{case_barcode}.trim().equals("") ? new Integer($P{case_label_copies}) > 0 : $P{case_barcode}.equals($F{case_bar_code})]]></printWhenExpression>
-			<element kind="component" uuid="3813d81e-46a0-4e78-9004-4ac548fd8abf" x="325" y="9" width="98" height="16" style="Barcode">
-				<component kind="barbecue" type="Code128" drawText="false" checksumRequired="false" barWidth="2" barHeight="30">
-					<codeExpression><![CDATA[$F{case_bar_code}]]></codeExpression>
-				</component>
-				<property name="com.jaspersoft.studio.unit.barWidth" value="px"/>
-				<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
-				<property name="net.sf.jasperreports.style.hImageAlign" value="Right"/>
-				<property name="net.sf.jasperreports.style.hTextAlign" value="Right"/>
-			</element>
-			<element kind="component" uuid="97b4a239-a008-43b0-84a0-386d0e0cd358" x="325" y="177" width="98" height="16" style="Barcode">
-				<component kind="barbecue" type="Code128" drawText="false" checksumRequired="false" barWidth="2" barHeight="30">
-					<codeExpression><![CDATA[$F{document_number}]]></codeExpression>
-				</component>
-				<property name="com.jaspersoft.studio.unit.barWidth" value="px"/>
-				<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
-				<property name="net.sf.jasperreports.style.hImageAlign" value="Right"/>
-				<property name="net.sf.jasperreports.style.hTextAlign" value="Right"/>
-			</element>
-			<element kind="rectangle" uuid="93ee83e8-565f-4b63-be58-14bb5e598a24" mode="Transparent" x="7" y="7" width="411" height="269" radius="3">
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<pen lineWidth="1.0"/>
-			</element>
-			<element kind="textField" uuid="7a12b106-509f-4157-a5a3-b1eb942dd4fc" x="10" y="206" width="90" height="12" bold="true">
-				<expression><![CDATA[$F{clientCaption}.toUpperCase() + ":"]]></expression>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-			</element>
-			<element kind="textField" uuid="b2411c5d-9ed7-435b-b4e1-7b709e58d75c" x="217" y="206" width="100" height="12" bold="true">
-				<expression><![CDATA[$F{venueCaption}.toUpperCase() + ":"]]></expression>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-			</element>
-			<element kind="textField" uuid="ba19d4a9-4fba-4154-95b4-33c31337e30d" x="10" y="235" width="70" height="12" bold="true">
-				<expression><![CDATA[$F{planned_start_date_caption}.toUpperCase() + ":"]]></expression>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-			</element>
-			<element kind="textField" uuid="2299b722-77f1-45b3-94fe-2c762cb73644" x="136" y="235" width="90" height="12" bold="true">
-				<expression><![CDATA[$F{planned_end_date_caption}.toUpperCase() + ":"]]></expression>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			</element>
-			<element kind="textField" uuid="0902cace-a195-4500-b18c-0c1aa73f4bd1" x="81" y="251" width="179" height="21" forecolor="#000000" fontSize="9.0" bold="false" vTextAlign="Middle">
-				<expression><![CDATA[$F{biz_loc_addr} != null ? $F{biz_loc_addr} : " " + "\n" + $F{corp_phone} != null ? $F{corp_phone} : " " + ($F{web_site} != null ?  " - " + $F{web_site} : "")]]></expression>
-				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-			</element>
-			<element kind="line" uuid="0abb4a42-8c06-43f5-bc06-ae47b22d7e3a" x="7" y="35" width="411" height="1">
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<pen lineWidth="0.5"/>
-			</element>
-			<element kind="line" uuid="9fa9ab99-b904-41c2-9495-1d0960dd8691" x="7" y="175" width="411" height="1">
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<pen lineWidth="0.5"/>
-			</element>
-			<element kind="line" uuid="6d53c606-293a-4053-a730-a0d0d39a2f4f" x="7" y="204" width="411" height="1">
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<pen lineWidth="0.5"/>
-			</element>
-			<element kind="line" uuid="2b2905dc-fe9a-448e-8467-ef8e39daef2f" x="7" y="233" width="411" height="1">
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<pen lineWidth="0.5"/>
-			</element>
-			<element kind="line" uuid="0d727cbc-6687-47c7-8098-9c77620c5274" x="7" y="248" width="411" height="1">
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<pen lineWidth="0.5"/>
-			</element>
-			<element kind="line" uuid="78ea300d-6794-4bab-8d92-34a03a376260" x="273" y="233" width="1" height="43">
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<pen lineWidth="0.5"/>
-			</element>
-			<element kind="textField" uuid="241e7753-9078-4995-8abf-7667ece47a0a" x="10" y="176" width="307" height="28" markup="styled" printWhenDetailOverflows="true" hTextAlign="Left" vTextAlign="Middle" style="CaseName">
-				<expression><![CDATA["<font size=\"" + new Integer(Math.min(((int)(Math.floor(307 / (new Double((new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",1,16)).stringWidth($F{element_name})-3))/16)))),(int)20)).toString() +"\">" + $F{element_name}.replaceAll("&","&amp;") + "</font>"]]></expression>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			</element>
-			<element kind="textField" uuid="0c529caf-9ad5-4a65-9644-dff10e6e43be" x="10" y="219" width="189" height="13" printWhenDetailOverflows="true" bold="false" vTextAlign="Top">
-				<paragraph lineSpacing="Proportional" lineSpacingSize="1.4"/>
-				<expression><![CDATA[$F{client_override}.equals("") ? $F{client_company} : $F{client_override}]]></expression>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			</element>
-			<element kind="textField" uuid="eb9e3c4e-d30b-4695-ad3b-252911f76f07" x="217" y="219" width="198" height="13" printWhenDetailOverflows="true" bold="false" vTextAlign="Top">
-				<paragraph lineSpacing="Proportional" lineSpacingSize="1.4"/>
-				<expression><![CDATA[$F{venue_override}.equals("") ? $F{venue_company} : $F{venue_override}]]></expression>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			</element>
-			<element kind="textField" uuid="c9d62076-b2be-4457-b322-2cee5e4ff57c" x="81" y="235" width="50" height="12" bold="false">
-				<expression><![CDATA[$F{planned_start_date}]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+            <printWhenExpression><![CDATA[$P{case_barcode} == null || $P{case_barcode}.trim().equals("") ? new Integer($P{case_label_copies}) > 0 : $P{case_barcode}.equals($F{case_bar_code})]]></printWhenExpression>
+			<componentElement>
+				<reportElement style="Barcode" x="325" y="9" width="98" height="16" uuid="3813d81e-46a0-4e78-9004-4ac548fd8abf">
+					<property name="com.jaspersoft.studio.unit.barWidth" value="px"/>
+					<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
+					<property name="net.sf.jasperreports.style.hImageAlign" value="Right"/>
+					<property name="net.sf.jasperreports.style.hTextAlign" value="Right"/>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false" barWidth="2" barHeight="30">
+					<jr:codeExpression><![CDATA[$F{case_bar_code}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<componentElement>
+				<reportElement style="Barcode" x="325" y="177" width="98" height="16" uuid="97b4a239-a008-43b0-84a0-386d0e0cd358">
+					<property name="com.jaspersoft.studio.unit.barWidth" value="px"/>
+					<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
+					<property name="net.sf.jasperreports.style.hImageAlign" value="Right"/>
+					<property name="net.sf.jasperreports.style.hTextAlign" value="Right"/>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false" barWidth="2" barHeight="30">
+					<jr:codeExpression><![CDATA[$F{document_number}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<rectangle radius="3">
+				<reportElement mode="Transparent" x="7" y="7" width="411" height="269" uuid="93ee83e8-565f-4b63-be58-14bb5e598a24">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="10" y="206" width="90" height="12" uuid="7a12b106-509f-4157-a5a3-b1eb942dd4fc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientCaption}.toUpperCase() + ":"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="206" width="100" height="12" uuid="b2411c5d-9ed7-435b-b4e1-7b709e58d75c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{venueCaption}.toUpperCase() + ":"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="235" width="70" height="12" uuid="ba19d4a9-4fba-4154-95b4-33c31337e30d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{planned_start_date_caption}.toUpperCase() + ":"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="235" width="90" height="12" uuid="2299b722-77f1-45b3-94fe-2c762cb73644">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{planned_end_date_caption}.toUpperCase() + ":"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="251" width="179" height="21" forecolor="#000000" uuid="0902cace-a195-4500-b18c-0c1aa73f4bd1">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{biz_loc_addr} != null ? $F{biz_loc_addr} : " " + "\n" + $F{corp_phone} != null ? $F{corp_phone} : " " + ($F{web_site} != null ?  " - " + $F{web_site} : "")]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="7" y="35" width="411" height="1" uuid="0abb4a42-8c06-43f5-bc06-ae47b22d7e3a">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="7" y="175" width="411" height="1" uuid="9fa9ab99-b904-41c2-9495-1d0960dd8691">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="7" y="204" width="411" height="1" uuid="6d53c606-293a-4053-a730-a0d0d39a2f4f">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="7" y="233" width="411" height="1" uuid="2b2905dc-fe9a-448e-8467-ef8e39daef2f">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="7" y="248" width="411" height="1" uuid="0d727cbc-6687-47c7-8098-9c77620c5274">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="273" y="233" width="1" height="43" uuid="78ea300d-6794-4bab-8d92-34a03a376260">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="CaseName" x="10" y="176" width="307" height="28" isPrintWhenDetailOverflows="true" uuid="241e7753-9078-4995-8abf-7667ece47a0a">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA["<font size=\"" + new Integer(Math.min(((int)(Math.floor(307 / (new Double((new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",1,16)).stringWidth($F{element_name})-3))/16)))),(int)20)).toString() +"\">" + $F{element_name}.replaceAll("&","&amp;") + "</font>"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="219" width="189" height="13" isPrintWhenDetailOverflows="true" uuid="0c529caf-9ad5-4a65-9644-dff10e6e43be">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font isBold="false"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{client_override}.equals("") ? $F{client_company} : $F{client_override}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="219" width="198" height="13" isPrintWhenDetailOverflows="true" uuid="eb9e3c4e-d30b-4695-ad3b-252911f76f07">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font isBold="false"/>
+					<paragraph lineSpacing="Proportional" lineSpacingSize="1.4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{venue_override}.equals("") ? $F{venue_company} : $F{venue_override}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="235" width="50" height="12" uuid="c9d62076-b2be-4457-b322-2cee5e4ff57c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{planned_start_date}]]></textFieldExpression>
 				<patternExpression><![CDATA[$P{DATE_FORMAT}]]></patternExpression>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-			</element>
-			<element kind="textField" uuid="cbeee87f-c5a8-4787-b6df-b225c4ad1ce6" x="223" y="235" width="50" height="12" bold="false">
-				<expression><![CDATA[$F{planned_end_date}]]></expression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="235" width="50" height="12" uuid="cbeee87f-c5a8-4787-b6df-b225c4ad1ce6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{planned_end_date}]]></textFieldExpression>
 				<patternExpression><![CDATA[$P{DATE_FORMAT}]]></patternExpression>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-			</element>
-			<element kind="line" uuid="023cbcb0-fe61-40cb-bf23-a4f38b5fa8d8" x="212" y="204" width="1" height="29">
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<pen lineWidth="0.5"/>
-			</element>
-			<element kind="textField" uuid="fc00f696-873f-457d-ba82-0dd79ce2a4e6" x="277" y="235" width="70" height="12" bold="true">
-				<expression><![CDATA["WEIGHT:"]]></expression>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			</element>
-			<element kind="textField" uuid="4c6e0155-da4c-443a-97e9-6f7824676900" x="330" y="235" width="54" height="12" bold="false" hTextAlign="Right">
-				<expression><![CDATA[$F{consolidated_weight}]]></expression>
+			</textField>
+			<line>
+				<reportElement x="212" y="204" width="1" height="29" uuid="023cbcb0-fe61-40cb-bf23-a4f38b5fa8d8">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="277" y="235" width="70" height="12" uuid="fc00f696-873f-457d-ba82-0dd79ce2a4e6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["WEIGHT:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="235" width="54" height="12" uuid="4c6e0155-da4c-443a-97e9-6f7824676900">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{consolidated_weight}]]></textFieldExpression>
 				<patternExpression><![CDATA["##.# " + $F{w_unit}.toUpperCase()]]></patternExpression>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			</element>
-			<element kind="line" uuid="52d5336f-4564-4713-badb-13a324cb83dc" x="132" y="233" width="1" height="15">
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<pen lineWidth="0.5"/>
-			</element>
-			<element kind="staticText" uuid="3da3307e-48b4-4b70-8e2a-688f3834c132" x="10" y="38" width="100" height="12" bold="true">
+			</textField>
+			<line>
+				<reportElement x="132" y="233" width="1" height="15" uuid="52d5336f-4564-4713-badb-13a324cb83dc">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="38" width="100" height="12" uuid="3da3307e-48b4-4b70-8e2a-688f3834c132">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
 				<text><![CDATA[CONTENTS:]]></text>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-			</element>
-			<element kind="textField" uuid="889f7299-685d-436b-971b-641fb5119325" x="325" y="192" width="98" height="12" bold="true" hTextAlign="Center">
-				<expression><![CDATA[$F{document_number}]]></expression>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			</element>
-			<element kind="textField" uuid="f1469321-a20c-4e47-aa64-68d09da93355" x="325" y="23" width="98" height="12" bold="true" hTextAlign="Center">
-				<expression><![CDATA[$F{case_bar_code}]]></expression>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			</element>
-			<element kind="textField" uuid="7cc207f8-0bb9-4442-aff1-2c9e91c8d911" x="10" y="7" width="315" height="28" markup="styled" bold="true" vTextAlign="Middle">
-				<expression><![CDATA["<font size=\"" + $V{CaseNameFontSize} +"\">" + $F{description}.replaceAll("&","&amp;") + "</font>"]]></expression>
-			</element>
-			<element kind="component" uuid="2bf14506-3cd6-477a-a388-c287e9055108" stretchType="ElementGroupHeight" x="7" y="51" width="210" height="2">
-				<printWhenExpression><![CDATA[$F{list_count} > 10]]></printWhenExpression>
-				<component kind="list" printOrder="Vertical">
-					<datasetRun uuid="2e7a101f-d8dd-4c34-b620-a35ff8a7b654" subDataset="Contents">
+			</staticText>
+			<textField>
+				<reportElement x="325" y="192" width="98" height="12" uuid="889f7299-685d-436b-971b-641fb5119325">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{document_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="23" width="98" height="12" uuid="f1469321-a20c-4e47-aa64-68d09da93355">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{case_bar_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="7" width="315" height="28" uuid="7cc207f8-0bb9-4442-aff1-2c9e91c8d911"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<font size=\"" + $V{CaseNameFontSize} +"\">" + $F{description}.replaceAll("&","&amp;") + "</font>"]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement stretchType="RelativeToTallestObject" x="7" y="51" width="210" height="2" uuid="2bf14506-3cd6-477a-a388-c287e9055108">
+					<property name="com.jaspersoft.studio.unit.CONTENTS.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.CONTENTS.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[$F{list_count} > 10]]></printWhenExpression>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Contents" uuid="2e7a101f-d8dd-4c34-b620-a35ff8a7b654">
+						<datasetParameter name="LINE_ITEM_ID">
+							<datasetParameterExpression><![CDATA[$F{line_item_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="list_count">
+							<datasetParameterExpression><![CDATA[$F{list_count}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="long_list">
+							<datasetParameterExpression><![CDATA[$F{long_list}]]></datasetParameterExpression>
+						</datasetParameter>
 						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-						<parameter name="LINE_ITEM_ID">
-							<expression><![CDATA[$F{line_item_id}]]></expression>
-						</parameter>
-						<parameter name="list_count">
-							<expression><![CDATA[$F{list_count}]]></expression>
-						</parameter>
-						<parameter name="long_list">
-							<expression><![CDATA[$F{long_list}]]></expression>
-						</parameter>
 					</datasetRun>
-					<contents height="2" width="210">
-						<element kind="textField" uuid="0ee7fc3c-6c44-4c37-917f-1dd35d38960f" x="0" y="0" width="25" height="2" textAdjust="StretchHeight" removeLineWhenBlank="true" hTextAlign="Right" style="Detail">
-							<printWhenExpression><![CDATA[$V{line count} <= java.lang.Math.min($V{line_limit}, 20)]]></printWhenExpression>
-							<expression><![CDATA[$F{qty} + " x "]]></expression>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						</element>
-						<element kind="textField" uuid="38ec0d7f-c4d1-45df-b17a-b5246f7f04b8" x="28" y="0" width="182" height="2" textAdjust="StretchHeight" removeLineWhenBlank="true" style="Detail">
-							<printWhenExpression><![CDATA[$V{line count} <= java.lang.Math.min($V{line_limit}, 20)]]></printWhenExpression>
-							<expression><![CDATA[$F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))]]></expression>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						</element>
-					</contents>
-				</component>
-				<property name="com.jaspersoft.studio.unit.CONTENTS.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.CONTENTS.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			</element>
-			<element kind="component" uuid="936554e5-0e4b-4981-8cbe-a132ea2a908c" stretchType="ElementGroupHeight" x="213" y="51" width="210" height="2">
-				<printWhenExpression><![CDATA[$F{list_count} > 10]]></printWhenExpression>
-				<component kind="list" printOrder="Vertical">
-					<datasetRun uuid="bc6e7b62-99cf-41e7-b858-ef1ca05e1d6d" subDataset="Contents">
+					<jr:listContents height="2" width="210">
+						<textField isStretchWithOverflow="true">
+							<reportElement style="Detail" x="0" y="0" width="25" height="2" isRemoveLineWhenBlank="true" uuid="0ee7fc3c-6c44-4c37-917f-1dd35d38960f">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<printWhenExpression><![CDATA[$V{line count} <= java.lang.Math.min($V{line_limit}, 20)]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Right"/>
+							<textFieldExpression><![CDATA[$F{qty} + " x "]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true">
+							<reportElement style="Detail" x="28" y="0" width="182" height="2" isRemoveLineWhenBlank="true" uuid="38ec0d7f-c4d1-45df-b17a-b5246f7f04b8">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<printWhenExpression><![CDATA[$V{line count} <= java.lang.Math.min($V{line_limit}, 20)]]></printWhenExpression>
+							</reportElement>
+							<textFieldExpression><![CDATA[$F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement stretchType="RelativeToTallestObject" x="213" y="51" width="210" height="2" uuid="936554e5-0e4b-4981-8cbe-a132ea2a908c">
+					<property name="com.jaspersoft.studio.unit.CONTENTS.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.CONTENTS.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[$F{list_count} > 10]]></printWhenExpression>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Contents" uuid="bc6e7b62-99cf-41e7-b858-ef1ca05e1d6d">
+						<datasetParameter name="LINE_ITEM_ID">
+							<datasetParameterExpression><![CDATA[$F{line_item_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="list_count">
+							<datasetParameterExpression><![CDATA[$F{list_count}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="long_list">
+							<datasetParameterExpression><![CDATA[$F{long_list}]]></datasetParameterExpression>
+						</datasetParameter>
 						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-						<parameter name="LINE_ITEM_ID">
-							<expression><![CDATA[$F{line_item_id}]]></expression>
-						</parameter>
-						<parameter name="list_count">
-							<expression><![CDATA[$F{list_count}]]></expression>
-						</parameter>
-						<parameter name="long_list">
-							<expression><![CDATA[$F{long_list}]]></expression>
-						</parameter>
 					</datasetRun>
-					<contents height="2" width="210">
-						<element kind="textField" uuid="9b5be2eb-b794-4476-9717-2dff517724ba" x="0" y="0" width="25" height="2" textAdjust="StretchHeight" removeLineWhenBlank="true" hTextAlign="Right" style="Detail">
-							<printWhenExpression><![CDATA[$V{line count} > java.lang.Math.min($V{line_limit}, 20) && $V{line count} < 40]]></printWhenExpression>
-							<expression><![CDATA[$F{qty} + " x "]]></expression>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						</element>
-						<element kind="textField" uuid="c0acda60-3906-4adf-8b0a-f55647da10b7" x="28" y="0" width="176" height="2" markup="html" textAdjust="StretchHeight" removeLineWhenBlank="true" style="Detail">
-							<printWhenExpression><![CDATA[$V{line count} > java.lang.Math.min($V{line_limit}, 20) && $V{line count} < 41]]></printWhenExpression>
-							<expression><![CDATA[$V{line count} < 40 ? ($F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))) : "<b>Continued...<b>"]]></expression>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<property name="com.jaspersoft.studio.unit.x" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						</element>
-					</contents>
-				</component>
-				<property name="com.jaspersoft.studio.unit.CONTENTS.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.CONTENTS.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			</element>
-			<element kind="component" uuid="d9a65764-8a50-46a6-8e50-a819462a2421" stretchType="ElementGroupHeight" x="7" y="53" width="400" height="2">
-				<printWhenExpression><![CDATA[$F{list_count} < 11]]></printWhenExpression>
-				<component kind="list" printOrder="Vertical">
-					<datasetRun uuid="41d49bef-58c0-4bb6-8799-8d6bf8b6bf95" subDataset="Contents">
+					<jr:listContents height="2" width="210">
+						<textField isStretchWithOverflow="true">
+							<reportElement style="Detail" x="0" y="0" width="25" height="2" isRemoveLineWhenBlank="true" uuid="9b5be2eb-b794-4476-9717-2dff517724ba">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<printWhenExpression><![CDATA[$V{line count} > java.lang.Math.min($V{line_limit}, 20) && $V{line count} < 40]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Right"/>
+							<textFieldExpression><![CDATA[$F{qty} + " x "]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true">
+							<reportElement style="Detail" x="28" y="0" width="176" height="2" isRemoveLineWhenBlank="true" uuid="c0acda60-3906-4adf-8b0a-f55647da10b7">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.x" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<printWhenExpression><![CDATA[$V{line count} > java.lang.Math.min($V{line_limit}, 20) && $V{line count} < 41]]></printWhenExpression>
+							</reportElement>
+							<textElement markup="html"/>
+							<textFieldExpression><![CDATA[$V{line count} < 40 ? ($F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))) : "<b>Continued...<b>"]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement stretchType="RelativeToTallestObject" x="7" y="53" width="400" height="2" uuid="d9a65764-8a50-46a6-8e50-a819462a2421">
+					<property name="com.jaspersoft.studio.unit.CONTENTS.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.CONTENTS.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[$F{list_count} < 11]]></printWhenExpression>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Contents" uuid="41d49bef-58c0-4bb6-8799-8d6bf8b6bf95">
+						<datasetParameter name="LINE_ITEM_ID">
+							<datasetParameterExpression><![CDATA[$F{line_item_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="list_count">
+							<datasetParameterExpression><![CDATA[$F{list_count}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="long_list">
+							<datasetParameterExpression><![CDATA[$F{long_list}]]></datasetParameterExpression>
+						</datasetParameter>
 						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-						<parameter name="LINE_ITEM_ID">
-							<expression><![CDATA[$F{line_item_id}]]></expression>
-						</parameter>
-						<parameter name="list_count">
-							<expression><![CDATA[$F{list_count}]]></expression>
-						</parameter>
-						<parameter name="long_list">
-							<expression><![CDATA[$F{long_list}]]></expression>
-						</parameter>
 					</datasetRun>
-					<contents height="2" width="400">
-						<element kind="textField" uuid="779afe2e-8ec0-4ec6-89ae-bb1cac3d36fc" x="0" y="0" width="25" height="2" textAdjust="StretchHeight" removeLineWhenBlank="true" hTextAlign="Right" style="Detail">
-							<expression><![CDATA[$F{qty} + " x "]]></expression>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						</element>
-						<element kind="textField" uuid="db08a535-cca9-4de3-bc32-816442f18d49" x="28" y="0" width="372" height="2" textAdjust="StretchHeight" removeLineWhenBlank="true" style="Detail">
-							<expression><![CDATA[$F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))]]></expression>
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-							<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						</element>
-					</contents>
-				</component>
-				<property name="com.jaspersoft.studio.unit.CONTENTS.width" value="px"/>
-				<property name="com.jaspersoft.studio.unit.CONTENTS.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
-			</element>
-			<element kind="textField" uuid="e9c5ab6d-d1ea-4959-a138-af53ad05a7ff" mode="Opaque" x="274" y="249" width="144" height="11" forecolor="#FFFFFF" backcolor="#000000" markup="styled" fontSize="8.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
-				<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
-				<expression><![CDATA["<font size=\"" + new Integer(Math.min(((int)(Math.floor(160 / (new Double((new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",1,16)).stringWidth($F{parentDescription})))/16)))),(int)8)).toString() +"\">" + $F{parentDescription}.replaceAll("&","&amp;") + "</font>"]]></expression>
-				<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				<property name="com.jaspersoft.studio.unit.x" value="px"/>
-				<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<jr:listContents height="2" width="400">
+						<textField isStretchWithOverflow="true">
+							<reportElement style="Detail" x="0" y="0" width="25" height="2" isRemoveLineWhenBlank="true" uuid="779afe2e-8ec0-4ec6-89ae-bb1cac3d36fc">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textElement textAlignment="Right"/>
+							<textFieldExpression><![CDATA[$F{qty} + " x "]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true">
+							<reportElement style="Detail" x="28" y="0" width="372" height="2" isRemoveLineWhenBlank="true" uuid="db08a535-cca9-4de3-bc32-816442f18d49">
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							</reportElement>
+							<textFieldExpression><![CDATA[$F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<textField>
+				<reportElement mode="Opaque" x="274" y="249" width="144" height="11" forecolor="#FFFFFF" backcolor="#000000" uuid="e9c5ab6d-d1ea-4959-a138-af53ad05a7ff">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
+				</reportElement>
 				<box>
 					<pen lineWidth="1.0" lineColor="#000000"/>
 				</box>
-			</element>
-			<element kind="frame" uuid="b2c1c907-d26c-4f4a-a867-a0e150a25883" x="277" y="256" width="138" height="18">
-				<printWhenExpression><![CDATA[false]]></printWhenExpression>
-				<element kind="textField" uuid="d0780373-be59-43e2-881c-1687585bab07" x="0" y="0" width="53" height="12" bold="true">
-					<printWhenExpression><![CDATA[$F{top_level_item} == 1]]></printWhenExpression>
-					<expression><![CDATA["CASE #:"]]></expression>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</element>
-				<element kind="textField" uuid="a3693240-48ea-49bf-b28b-90f0b00d66f0" x="61" y="0" width="37" height="12" bold="false" hTextAlign="Right">
-					<printWhenExpression><![CDATA[$F{top_level_item} == 1]]></printWhenExpression>
-					<expression><![CDATA[$V{Case_count} + " OF "]]></expression>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</element>
-				<element kind="textField" uuid="9c48ab13-6f9f-4521-a640-f5fe733ced14" x="101" y="0" width="37" height="12" evaluationTime="Report" bold="false" hTextAlign="Left">
-					<printWhenExpression><![CDATA[$F{top_level_item} == 1]]></printWhenExpression>
-					<expression><![CDATA[$V{Case_count}]]></expression>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</element>
-				<element kind="textField" uuid="412975de-b00f-40d6-ade0-e2c5071a45ba" x="71" y="6" width="37" height="12" bold="false" hTextAlign="Right">
-					<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
-					<expression><![CDATA[$V{parentCase_COUNT} + " OF "]]></expression>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</element>
-				<element kind="textField" uuid="36241b89-01c1-44f6-bff6-a4a022bf4a59" x="111" y="6" width="27" height="12" evaluationTime="Auto" bold="false" hTextAlign="Left">
-					<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
-					<expression><![CDATA[$V{parentCase_COUNT}]]></expression>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</element>
-				<element kind="textField" uuid="ba15c1ae-e4ed-4640-b5f5-703ab8f79f75" x="0" y="6" width="83" height="12" bold="true">
-					<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
-					<expression><![CDATA["INNER CASE #:"]]></expression>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</element>
-			</element>
-			<element kind="image" uuid="ac786504-aa35-4ee5-b2ee-b89052fb4f3c" x="10" y="251" width="70" height="21" hImageAlign="Center" vImageAlign="Middle">
-				<expression><![CDATA[$F{blobhandle}]]></expression>
-			</element>
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<font size=\"" + new Integer(Math.min(((int)(Math.floor(160 / (new Double((new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",1,16)).stringWidth($F{parentDescription})))/16)))),(int)8)).toString() +"\">" + $F{parentDescription}.replaceAll("&","&amp;") + "</font>"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="277" y="256" width="138" height="18" uuid="b2c1c907-d26c-4f4a-a867-a0e150a25883">
+					<printWhenExpression><![CDATA[false]]></printWhenExpression>
+				</reportElement>
+				<textField>
+					<reportElement x="0" y="0" width="53" height="12" uuid="d0780373-be59-43e2-881c-1687585bab07">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["CASE #:"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="61" y="0" width="37" height="12" uuid="a3693240-48ea-49bf-b28b-90f0b00d66f0">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{Case_count} + " OF "]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="101" y="0" width="37" height="12" uuid="9c48ab13-6f9f-4521-a640-f5fe733ced14">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Left">
+						<font isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{Case_count}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="71" y="6" width="37" height="12" uuid="412975de-b00f-40d6-ade0-e2c5071a45ba">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{parentCase_COUNT} + " OF "]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Auto">
+					<reportElement x="111" y="6" width="27" height="12" uuid="36241b89-01c1-44f6-bff6-a4a022bf4a59">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Left">
+						<font isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{parentCase_COUNT}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="6" width="83" height="12" uuid="ba15c1ae-e4ed-4640-b5f5-703ab8f79f75">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["INNER CASE #:"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="10" y="251" width="70" height="21" uuid="ac786504-aa35-4ee5-b2ee-b89052fb4f3c"/>
+				<imageExpression><![CDATA[$F{blobhandle}]]></imageExpression>
+			</image>
 		</band>
 	</detail>
 </jasperReport>
+
