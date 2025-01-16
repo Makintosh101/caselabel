@@ -1,0 +1,1181 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="case labels A6" language="java" printOrder="Horizontal" pageWidth="425" pageHeight="283" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="425" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e66e3e9a-1740-4952-83db-04fea9cda762">
+	<property name="ireport.zoom" value="4.715895382000055"/>
+	<property name="ireport.x" value="349"/>
+	<property name="ireport.y" value="87"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="blueelephantuk_dev"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="591"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="402"/>
+	<property name="net.sf.jasperreports.style.evaluation.time.enabled" value="true"/>
+	<style name="textStyle" default="true" hTextAlign="Left" blankWhenNull="true" fontName="Arial" fontSize="10.0"/>
+	<style name="Barcode" hTextAlign="Justified" vTextAlign="Middle" hImageAlign="Right" vImageAlign="Middle"/>
+	<style name="Caption" style="textStyle" fontSize="12.0" bold="true"/>
+	<style name="Fields" style="textStyle" bold="false"/>
+	<style name="CaseName" style="textStyle" vTextAlign="Top" bold="true"/>
+	<style name="ClientCompany" style="textStyle" bold="false">
+		<conditionalStyle fontSize="12.0">
+			<conditionExpression><![CDATA[$F{client_company}.length() < 22]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="11.0">
+			<conditionExpression><![CDATA[$F{client_company}.length() < 25 && $F{client_company}.length() > 21]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="10.0">
+			<conditionExpression><![CDATA[$F{client_company}.length() < 28 && $F{client_company}.length() > 24]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="9.0">
+			<conditionExpression><![CDATA[$F{client_company}.length() < 31 && $F{client_company}.length() > 27]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="8.0">
+			<conditionExpression><![CDATA[$F{client_company}.length() < 36 && $F{client_company}.length() > 30]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="7.0">
+			<conditionExpression><![CDATA[$F{client_company}.length() < 43 && $F{client_company}.length() > 35]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="6.0">
+			<conditionExpression><![CDATA[$F{client_company}.length() < 52 && $F{client_company}.length() > 42]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="5.0">
+			<conditionExpression><![CDATA[$F{client_company}.length() > 51]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="VenueCompany" style="textStyle" bold="false">
+		<conditionalStyle fontSize="12.0">
+			<conditionExpression><![CDATA[$F{venue_company}.length() < 22]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="11.0">
+			<conditionExpression><![CDATA[$F{venue_company}.length() < 25 && $F{venue_company}.length() > 21]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="10.0">
+			<conditionExpression><![CDATA[$F{venue_company}.length() < 28 && $F{venue_company}.length() > 24]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="9.0">
+			<conditionExpression><![CDATA[$F{venue_company}.length() < 31 && $F{venue_company}.length() > 27]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="8.0">
+			<conditionExpression><![CDATA[$F{venue_company}.length() < 36 && $F{venue_company}.length() > 30]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="7.0">
+			<conditionExpression><![CDATA[$F{venue_company}.length() < 43 && $F{venue_company}.length() > 35]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="6.0">
+			<conditionExpression><![CDATA[$F{venue_company}.length() < 52 && $F{venue_company}.length() > 42]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="5.0">
+			<conditionExpression><![CDATA[$F{venue_company}.length() > 51]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="StartDateCaption" style="Caption" bold="true">
+		<conditionalStyle fontSize="12.0">
+			<conditionExpression><![CDATA[$F{planned_start_date_caption}.length() < 13]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="11.0">
+			<conditionExpression><![CDATA[$F{planned_start_date_caption}.length() < 16 && $F{planned_start_date_caption}.length() > 12]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="10.0">
+			<conditionExpression><![CDATA[$F{planned_start_date_caption}.length() < 19 && $F{planned_start_date_caption}.length() > 15]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="9.0">
+			<conditionExpression><![CDATA[$F{planned_start_date_caption}.length() < 22 && $F{planned_start_date_caption}.length() > 18]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="8.0">
+			<conditionExpression><![CDATA[$F{planned_start_date_caption}.length() > 21]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="EndDateCaption" style="Caption" bold="true">
+		<conditionalStyle fontSize="12.0">
+			<conditionExpression><![CDATA[$F{planned_end_date_caption}.length() < 13]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="11.0">
+			<conditionExpression><![CDATA[$F{planned_end_date_caption}.length() < 16 && $F{planned_end_date_caption}.length() > 12]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="10.0">
+			<conditionExpression><![CDATA[$F{planned_end_date_caption}.length() < 19 && $F{planned_end_date_caption}.length() > 15]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="9.0">
+			<conditionExpression><![CDATA[$F{planned_end_date_caption}.length() < 22 && $F{planned_end_date_caption}.length() > 18]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="8.0">
+			<conditionExpression><![CDATA[$F{planned_end_date_caption}.length() > 21]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="Detail" style="textStyle">
+		<conditionalStyle fontSize="8.0">
+			<conditionExpression><![CDATA[$P{list_count}+$P{long_list} > 20 && $P{list_count}+$P{long_list} <= 25]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="7.0">
+			<conditionExpression><![CDATA[$P{list_count}+$P{long_list} > 25 && $P{list_count}+$P{long_list} <= 35]]></conditionExpression>
+		</conditionalStyle>
+		<conditionalStyle fontSize="6.0">
+			<conditionExpression><![CDATA[$P{list_count}+$P{long_list} > 35]]></conditionExpression>
+		</conditionalStyle>
+	</style>
+	<style name="ElementName" style="textStyle" vTextAlign="Middle" bold="true"/>
+	<dataset name="Contents" uuid="38765270-f855-439a-a172-2c5e25a18097">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="swdev_dev"/>
+		<parameter name="LINE_ITEM_ID" class="java.lang.String"/>
+		<parameter name="list_count" class="java.lang.Integer"/>
+		<parameter name="long_list" class="java.lang.Integer"/>
+		<query language="SQL"><![CDATA[SELECT
+sum(litem.qty) as qty,
+item_man_res.resource_name,
+ivt_item.item_size,
+ivt_item.short_hand
+from st_ivt_equipment_list_line_item AS eq_litem
+left join st_prj_project_element_line_item as litem on litem.id = eq_litem.id
+left join st_biz_managed_resource as litem_man_res on litem_man_res.id = litem.managed_resource_id
+left join st_ivt_serial_number as ivt_serial on ivt_serial.id = litem_man_res.id
+left join st_ivt_inventory_item as ivt_item on ivt_item.id = ivt_serial.item_id or ivt_item.id = litem_man_res.id
+left join st_biz_managed_resource as item_man_res on item_man_res.id = ivt_item.id
+where
+eq_litem.parent_item_id =  $P{LINE_ITEM_ID}
+              AND IFNULL((SELECT biz_cf_value.storage_string
+FROM st_biz_resource_custom_field_value as cf_value
+LEFT JOIN st_biz_custom_field_value as biz_cf_value ON (cf_value.id = biz_cf_value.id)
+LEFT JOIN st_biz_custom_field_def as cf_def on (cf_def.id = biz_cf_value.custom_field_def_id)
+WHERE cf_value.resource_id = ivt_item.id 
+AND cf_def.field_id='exclude_from_case_labels'),'false') = 'false' 
+group by ivt_item.id
+ORDER BY resource_name, CAST(item_size AS DECIMAL)]]></query>
+		<field name="qty" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="qty"/>
+			<property name="com.jaspersoft.studio.field.label" value="qty"/>
+		</field>
+		<field name="resource_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="resource_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="resource_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_managed_resource"/>
+		</field>
+		<field name="item_size" class="java.lang.String"/>
+		<field name="short_hand" class="java.lang.String"/>
+		<variable name="line_limit" class="java.lang.Integer">
+			<expression><![CDATA[(($P{list_count}+$P{long_list})/2)-1]]></expression>
+		</variable>
+		<variable name="line count" calculation="Sum" class="java.lang.Integer">
+			<expression><![CDATA[new Integer(new java.text.DecimalFormat("0").format(new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",0,($P{list_count}+$P{long_list} > 25 ? 7 : 8))).stringWidth($F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))))) > 185 ? 2 : 1]]></expression>
+		</variable>
+	</dataset>
+	<dataset name="Logo" uuid="3e40f789-4500-47e8-b451-4c5e05eb82ab">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="live_dev"/>
+		<query language="SQL"><![CDATA[select blobhandle from rh_images where caption LIKE 'Case Logo%' ORDER BY upload_date DESC LIMIT 1]]></query>
+		<field name="blobhandle" class="java.io.InputStream">
+			<property name="com.jaspersoft.studio.field.name" value="blobhandle"/>
+			<property name="com.jaspersoft.studio.field.label" value="blobhandle"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="rh_images"/>
+		</field>
+	</dataset>
+	<dataset name="ManifestLabels" uuid="b1d83af7-90fe-4896-8fba-540858527f98">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="swdev_dev"/>
+		<parameter name="PROJECT_ELEMENT_ID" class="java.lang.String"/>
+		<parameter name="DATE_FORMAT" class="java.lang.String"/>
+		<parameter name="manifest_label_copies" class="java.lang.String"/>
+		<parameter name="DateFormatter" forPrompting="false" class="java.text.DateFormat"/>
+		<query language="SQL"><![CDATA[SELECT 
+       prj_el_def.name_singular,
+       prj.element_name,
+       prj.document_number,
+       prj.planned_start_date,
+       prj.planned_end_date,
+       prj_el_def.client_caption AS clientCaption,
+       CONCAT(IFNULL(crm_client.company,""),"\n",IFNULL(crm_client.first_name,"")," ",IFNULL(crm_client.last_name,""),"\n",IFNULL((SELECT dial_number from st_crm_phone where phone_name LIKE '%mobile%' AND contact_id = prj.CLIENT_ID LIMIT 1),"")) as client_company,
+       prj_el_def.venue_caption AS venueCaption,
+       prj_el_def.planned_start_date_caption,
+              prj_el_def.planned_end_date_caption,
+       
+       CONCAT(
+        IF(TRIM(IFNULL(venue.COMPANY, '')) > '',concat(venue.COMPANY,'\n'),''),
+        IF(TRIM(IFNULL(venue_addr.line1, '')) > '',concat(venue_addr.line1,'\n'),''),
+        IF(TRIM(IFNULL(venue_addr.line2, '')) > '',concat(venue_addr.line2,'\n'),''),
+        IF(TRIM(IFNULL(venue_addr.city, '')) > '',concat(venue_addr.city,', '),''),
+        IF(TRIM(IFNULL(venue_addr.state_or_province, '')) > '',concat(venue_addr.state_or_province,' '),''),
+        IF(TRIM(IFNULL(venue_addr.postal_code, '')) > '',venue_addr.postal_code,'')
+) as venue_company,
+   prj.notes,
+
+    corplogo.blobhandle AS logo_image_blob,
+       biz_corp.company_name AS corp_name,
+       biz_loc_phone.dial_number AS corp_phone,
+              biz_loc_email.address_url as corp_email,
+                 biz_corp.web_site,
+          biz_loc_phone.dial_number AS corp_phone,
+          biz_loc_email.address_url AS corp_email,
+          CONCAT(biz_loc_ship.line1," - ",biz_loc_ship.city,", ",biz_loc_ship.state_or_province," ",biz_loc_ship.postal_code) as biz_loc_addr,
+       biz_loc.time_zone,
+       
+       IFNULL((SELECT biz_cf_value.storage_string
+FROM st_prj_element_custom_field_value as cf_value
+LEFT JOIN st_biz_custom_field_value as biz_cf_value ON (cf_value.id = biz_cf_value.id)
+LEFT JOIN st_biz_custom_field_def as cf_def on (cf_def.id = biz_cf_value.custom_field_def_id)
+WHERE cf_value.proj_element_id=prj.id
+AND cf_def.field_id='client_override'
+),"") as client_override,
+
+       IFNULL((SELECT biz_cf_value.storage_string
+FROM st_prj_element_custom_field_value as cf_value
+LEFT JOIN st_biz_custom_field_value as biz_cf_value ON (cf_value.id = biz_cf_value.id)
+LEFT JOIN st_biz_custom_field_def as cf_def on (cf_def.id = biz_cf_value.custom_field_def_id)
+WHERE cf_value.proj_element_id=prj.id
+AND cf_def.field_id='venue_override'
+),"") as venue_override,
+
+       IFNULL((SELECT biz_cf_value.storage_string
+FROM st_prj_element_custom_field_value as cf_value
+LEFT JOIN st_biz_custom_field_value as biz_cf_value ON (cf_value.id = biz_cf_value.id)
+LEFT JOIN st_biz_custom_field_def as cf_def on (cf_def.id = biz_cf_value.custom_field_def_id)
+WHERE cf_value.proj_element_id=prj.id
+AND cf_def.field_id='manifest_label_notes'
+),"") as manifest_label_notes
+
+FROM st_prj_project_element AS prj
+       LEFT JOIN st_biz_corp_identity AS biz_corp ON biz_corp.id = IFNULL(prj.corp_identity_id,
+              (SELECT id
+              FROM st_biz_corp_identity
+              WHERE is_hq = '1'))
+       LEFT JOIN st_crm_contact AS crm_client ON crm_client.id = prj.CLIENT_ID
+       LEFT JOIN (SELECT contact_id, dial_number from st_crm_phone where phone_name LIKE '%mobile%' LIMIT 1) as client_mobile on client_mobile.contact_id = crm_client.id
+       LEFT JOIN st_crm_contact AS venue ON venue.id = prj.venue_id
+       LEFT JOIN st_crm_address as venue_addr ON (venue.DEF_MAIL_ID = venue_addr.id)
+       LEFT JOIN st_prj_element_definition AS prj_el_def ON prj_el_def.id = prj.def_id
+       LEFT JOIN rh_images AS corplogo ON corplogo.imageid = biz_corp.logo_id
+       LEFT JOIN st_biz_location AS biz_loc ON biz_loc.id = IFNULL(prj.location_id,
+              (SELECT hq_location_id
+              FROM st_biz_corp_identity
+              WHERE is_hq = '1'))
+       LEFT JOIN st_biz_loc_phone AS biz_loc_phone ON biz_loc_phone.id = biz_loc.def_phone_id
+              LEFT JOIN st_biz_loc_inet_addr as biz_loc_email on biz_loc_email.id = biz_loc.def_email_id
+           LEFT JOIN st_biz_loc_address as biz_loc_ship on biz_loc_ship.id = biz_loc.def_ship_id
+       
+              cross join (SELECT @row := @row + 1 as num FROM rh_images t, (SELECT @row := 0) r) nums /* generate numbers list with numbers from 1 to count of rh_images (plenty but not too many records) */   
+WHERE prj.id = $P{PROJECT_ELEMENT_ID}  
+
+-- WHERE prj.id = '75b8170d-a2d5-47fa-9956-37004c892a93'
+-- WHERE prj.id = '384af41f-78ec-4ec1-bb4a-139b3cc57739'
+-- prj.id = 'cda845f0-2a45-11ec-ae74-5600033cba12'
+-- prj.id = '1790c130-2bcf-11ec-ae74-5600033cba12'
+
+AND $P{manifest_label_copies} >= nums.num]]></query>
+		<field name="name_singular" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="name_singular"/>
+			<property name="com.jaspersoft.studio.field.label" value="name_singular"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_element_definition"/>
+		</field>
+		<field name="element_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="element_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="element_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_project_element"/>
+		</field>
+		<field name="document_number" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="document_number"/>
+			<property name="com.jaspersoft.studio.field.label" value="document_number"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_project_element"/>
+		</field>
+		<field name="planned_start_date" class="java.sql.Timestamp"/>
+		<field name="planned_end_date" class="java.sql.Timestamp"/>
+		<field name="clientCaption" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="client_caption"/>
+			<property name="com.jaspersoft.studio.field.label" value="clientCaption"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_element_definition"/>
+		</field>
+		<field name="client_company" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="company"/>
+			<property name="com.jaspersoft.studio.field.label" value="client_company"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="st_crm_contact"/>
+		</field>
+		<field name="venueCaption" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="venue_caption"/>
+			<property name="com.jaspersoft.studio.field.label" value="venueCaption"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_element_definition"/>
+		</field>
+		<field name="planned_start_date_caption" class="java.lang.String"/>
+		<field name="planned_end_date_caption" class="java.lang.String"/>
+		<field name="venue_company" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="company"/>
+			<property name="com.jaspersoft.studio.field.label" value="venue_company"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="st_crm_contact"/>
+		</field>
+		<field name="notes" class="java.lang.String"/>
+		<field name="logo_image_blob" class="java.io.InputStream">
+			<property name="com.jaspersoft.studio.field.name" value="blobhandle"/>
+			<property name="com.jaspersoft.studio.field.label" value="logo_image_blob"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="rh_images"/>
+		</field>
+		<field name="corp_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="company_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="corp_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_corp_identity"/>
+		</field>
+		<field name="corp_phone" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="dial_number"/>
+			<property name="com.jaspersoft.studio.field.label" value="corp_phone"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_loc_phone"/>
+		</field>
+		<field name="corp_email" class="java.lang.String"/>
+		<field name="web_site" class="java.lang.String"/>
+		<field name="biz_loc_addr" class="java.lang.String"/>
+		<field name="time_zone" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="time_zone"/>
+			<property name="com.jaspersoft.studio.field.label" value="time_zone"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_location"/>
+		</field>
+		<field name="client_override" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="client_override"/>
+			<property name="com.jaspersoft.studio.field.label" value="client_override"/>
+		</field>
+		<field name="venue_override" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="venue_override"/>
+			<property name="com.jaspersoft.studio.field.label" value="venue_override"/>
+		</field>
+		<field name="manifest_label_notes" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="manifest_label_notes"/>
+			<property name="com.jaspersoft.studio.field.label" value="manifest_label_notes"/>
+		</field>
+	</dataset>
+	<parameter name="DATE_FORMAT" forPrompting="false" class="java.lang.String">
+		<defaultValueExpression><![CDATA["dd/MM/yy"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DateFormatter" forPrompting="false" class="java.text.DateFormat">
+		<defaultValueExpression><![CDATA[$P{REPORT_FORMAT_FACTORY}.createDateFormat($P{DATE_FORMAT},$P{REPORT_LOCALE}, $P{REPORT_TIME_ZONE})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="PROJECT_ELEMENT_ID" class="java.lang.String">
+		<defaultValueExpression><![CDATA["30d0c24d-9802-437c-b8a6-e8ccd0037cb7"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="case_label_copies" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="manifest_label_copies" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="case_barcode" class="java.lang.String"/>
+	<parameter name="PRINT_ORPHAN_LABELS" class="java.lang.String"/>
+	<query language="sql"><![CDATA[SELECT *
+FROM
+  (  SELECT 
+  eqlitem.prep_quantity,
+  litem.id AS line_item_id,
+          ISNULL(peqlitem.id) AS top_level_item,
+          prj_el_def.name_singular,
+          prj.element_name,
+          prj.document_number,
+          man_res.resource_name AS description,
+          pman_res.resource_name AS parentDescription,
+          man_res.bar_code_id AS case_bar_code,
+          ivt_serial.stencil,
+          prj_el_def.client_caption AS clientCaption,
+          crm_client.company AS client_company,
+          prj_el_def.venue_caption AS venueCaption,
+          crm_venue.company AS venue_company,
+          prj_el_def.planned_start_date_caption,
+          prj.planned_start_date,
+          prj_el_def.planned_end_date_caption,
+          prj.planned_end_date,
+
+(SELECT count(DISTINCT ivt_item.id)
+           FROM st_prj_project_element_line_item AS litem
+           LEFT JOIN st_ivt_equipment_list_line_item AS child_eqlitem ON litem.id = child_eqlitem.id
+           LEFT JOIN st_ivt_serial_number AS ivt_serial ON ivt_serial.id = litem.managed_resource_id
+           LEFT JOIN st_ivt_inventory_item AS ivt_item ON ivt_item.id = IFNULL(ivt_serial.item_id,litem.managed_resource_id)
+                      LEFT JOIN st_biz_managed_resource AS item_man_res ON item_man_res.id = ivt_item.id
+           WHERE child_eqlitem.parent_item_id = eqlitem.id AND litem.project_element_id = prj.id
+             AND IFNULL((SELECT biz_cf_value.storage_string
+                           FROM st_biz_resource_custom_field_value AS cf_value
+                           LEFT JOIN st_biz_custom_field_value AS biz_cf_value ON (cf_value.id = biz_cf_value.id)
+                           LEFT JOIN st_biz_custom_field_def AS cf_def ON (cf_def.id = biz_cf_value.custom_field_def_id)
+                           WHERE cf_value.resource_id = ivt_item.id
+                             AND cf_def.field_id='exclude_from_case_labels'),'false') = 'false') AS list_count,
+
+(SELECT count(DISTINCT ivt_item.id)
+           FROM st_prj_project_element_line_item AS litem
+           LEFT JOIN st_ivt_equipment_list_line_item AS child_eqlitem ON litem.id = child_eqlitem.id
+           LEFT JOIN st_biz_managed_resource AS litem_man_res ON litem_man_res.id = litem.managed_resource_id
+           LEFT JOIN st_ivt_serial_number AS ivt_serial ON ivt_serial.id = litem_man_res.id
+           LEFT JOIN st_ivt_inventory_item AS ivt_item ON ivt_item.id = IFNULL(ivt_serial.item_id,litem_man_res.id)
+           LEFT JOIN st_biz_managed_resource AS item_man_res ON item_man_res.id = ivt_item.id
+           WHERE child_eqlitem.parent_item_id = eqlitem.id AND litem.project_element_id = prj.id
+            AND IFNULL(
+                         (SELECT biz_cf_value.storage_string
+                          FROM st_biz_resource_custom_field_value AS cf_value
+                          LEFT JOIN st_biz_custom_field_value AS biz_cf_value ON (cf_value.id = biz_cf_value.id)
+                          LEFT JOIN st_biz_custom_field_def AS cf_def ON (cf_def.id = biz_cf_value.custom_field_def_id)
+                          WHERE cf_value.resource_id = ivt_item.id
+                            AND cf_def.field_id='exclude_from_case_labels'),'false') = 'false'
+            AND LENGTH(CONCAT(item_man_res.resource_name,(IF(ISNULL(item_size),"",CONCAT(" (",TRIM(item_size),")"))))) > 35) AS long_list,
+
+(SELECT sum(ROUND(ivt_item.weight*st_ivt_equipment_list_line_item.prep_quantity,1)) AS weight
+              FROM st_ivt_equipment_list_line_item AS st_ivt_equipment_list_line_item
+              LEFT JOIN st_prj_project_element_line_item AS litem2 ON litem2.id = st_ivt_equipment_list_line_item.id
+              LEFT JOIN st_ivt_equipment_list_line_item AS parent_eqlitem ON parent_eqlitem.id = st_ivt_equipment_list_line_item.parent_item_id
+              LEFT JOIN st_ivt_equipment_list_line_item AS gparent_eqlitem ON gparent_eqlitem.id = parent_eqlitem.parent_item_id
+              LEFT JOIN st_ivt_equipment_list_line_item AS ggparent_eqlitem ON ggparent_eqlitem.id = gparent_eqlitem.parent_item_id
+              LEFT JOIN st_ivt_equipment_list_line_item AS gggparent_eqlitem ON gggparent_eqlitem.id = ggparent_eqlitem.parent_item_id
+              LEFT JOIN st_ivt_equipment_list_line_item AS ggggparent_eqlitem ON ggggparent_eqlitem.id = gggparent_eqlitem.parent_item_id
+              LEFT JOIN st_ivt_serial_number AS ivt_serial ON litem2.managed_resource_id = ivt_serial.id
+              LEFT JOIN st_ivt_inventory_item AS ivt_item ON ivt_item.id = IFNULL(ivt_serial.item_id,litem2.managed_resource_id)
+              WHERE litem2.project_element_id = prj.id and (st_ivt_equipment_list_line_item.id = eqlitem.id
+              OR parent_eqlitem.id = eqlitem.id
+              OR gparent_eqlitem.id = eqlitem.id
+              OR ggparent_eqlitem.id = eqlitem.id
+              OR gggparent_eqlitem.id = eqlitem.id
+              OR gggparent_eqlitem.id = eqlitem.id))/eqlitem.prep_quantity AS consolidated_weight,
+          ivt_item_w_unit.abbreviation AS w_unit,
+corplogo.blobhandle,
+          biz_corp.web_site,
+          biz_corp.company_name AS corp_name,
+          biz_loc_phone.dial_number AS corp_phone,
+          biz_loc_email.address_url AS corp_email,
+          CONCAT(biz_loc_ship.line1," - ",biz_loc_ship.city,", ",biz_loc_ship.state_or_province," ",biz_loc_ship.postal_code) as biz_loc_addr,
+          biz_loc.time_zone,
+          IFNULL((SELECT biz_cf_value.storage_string
+              FROM st_prj_element_custom_field_value as cf_value
+              LEFT JOIN st_biz_custom_field_value as biz_cf_value ON (cf_value.id = biz_cf_value.id)
+              LEFT JOIN st_biz_custom_field_def as cf_def on (cf_def.id = biz_cf_value.custom_field_def_id)
+              WHERE cf_value.proj_element_id=prj.id AND cf_def.field_id='client_override'),"") as client_override,
+          IFNULL((SELECT biz_cf_value.storage_string
+              FROM st_prj_element_custom_field_value as cf_value
+              LEFT JOIN st_biz_custom_field_value as biz_cf_value ON (cf_value.id = biz_cf_value.id)
+              LEFT JOIN st_biz_custom_field_def as cf_def on (cf_def.id = biz_cf_value.custom_field_def_id)
+              WHERE cf_value.proj_element_id=prj.id AND cf_def.field_id='venue_override'),"") as venue_override,
+          eqlitem.note_text,
+(CASE WHEN peqlitem.id IS NULL
+		THEN lpad(eqlitem.ordinal,3,0)
+	WHEN eqlitem.parent_item_id IS NOT NULL AND gpeqlitem.id IS NULL
+		THEN CONCAT(lpad(peqlitem.ordinal,3,0),lpad(eqlitem.ordinal,3,0))
+	WHEN eqlitem.parent_item_id IS NOT NULL AND peqlitem.parent_item_id IS NOT NULL AND gpeqlitem.parent_item_id IS NULL
+		THEN CONCAT(lpad(gpeqlitem.ordinal,3,0),lpad(peqlitem.ordinal,3,0),lpad(eqlitem.ordinal,3,0))
+	END) AS ordinal
+
+   FROM st_ivt_equipment_list_line_item AS eqlitem
+   
+   LEFT JOIN st_ivt_equipment_list_line_item AS peqlitem ON eqlitem.parent_item_id=peqlitem.id
+LEFT JOIN st_prj_project_element_line_item AS plitem ON plitem.id = peqlitem.id
+LEFT JOIN st_ivt_equipment_list_line_item AS gpeqlitem ON peqlitem.parent_item_id=gpeqlitem.id 
+
+   
+    LEFT JOIN st_prj_project_element_line_item AS litem ON litem.id = eqlitem.id
+    LEFT JOIN st_biz_managed_resource AS man_res ON man_res.id = litem.managed_resource_id
+    LEFT JOIN st_biz_managed_resource AS pman_res ON pman_res.id = plitem.managed_resource_id
+    LEFT JOIN st_ivt_serial_number AS ivt_serial ON man_res.id = ivt_serial.id
+    LEFT JOIN st_ivt_inventory_item AS ivt_item ON ivt_item.id = IFNULL(ivt_serial.item_id,litem.managed_resource_id)
+    LEFT JOIN st_biz_managed_resource AS item_man_res ON item_man_res.id = ivt_item.id
+    LEFT JOIN st_prj_project_element AS prj ON litem.project_element_id = prj.id
+    LEFT JOIN st_prj_element_definition AS prj_el_def ON prj_el_def.id = prj.def_id
+    LEFT JOIN st_ivt_equipment_list AS eq_list ON eq_list.id = prj.id
+    LEFT JOIN st_ivt_equipment_list_def AS eq_list_def ON eq_list_def.id = prj.def_id
+    LEFT JOIN st_crm_contact AS crm_client ON crm_client.id = prj.CLIENT_ID
+    LEFT JOIN st_crm_contact AS crm_venue ON crm_venue.id = prj.venue_id
+    LEFT JOIN st_biz_unit_of_measure AS ivt_item_w_unit ON ivt_item_w_unit.id = ivt_item.weight_unit_id
+    LEFT JOIN st_biz_corp_identity AS biz_corp ON biz_corp.id = IFNULL(prj.corp_identity_id, (SELECT id FROM st_biz_corp_identity WHERE is_hq = '1'))
+    LEFT JOIN rh_images AS corplogo ON corplogo.imageid = biz_corp.logo_id
+    LEFT JOIN st_biz_location AS biz_loc ON biz_loc.id = IFNULL(prj.location_id, (SELECT hq_location_id FROM st_biz_corp_identity WHERE is_hq = '1'))
+    LEFT JOIN st_biz_loc_address as biz_loc_ship on biz_loc_ship.id = biz_loc.def_ship_id
+    LEFT JOIN st_biz_loc_phone AS biz_loc_phone ON biz_loc_phone.id = biz_loc.def_phone_id
+    LEFT JOIN st_biz_loc_inet_addr AS biz_loc_email ON biz_loc_email.id = biz_loc.def_email_id
+    CROSS JOIN (SELECT installed_rank num from schema_version) nums on nums.num <= eqlitem.prep_quantity  /* generate numbers list with numbers from 1 to count of rh_images (plenty but not too many records) */
+   
+   WHERE prj.id = $P{PROJECT_ELEMENT_ID}
+      AND (ISNULL(eqlitem.parent_item_id) -- include top level line items
+      OR  (SELECT COUNT(child_eqlitem.id) FROM st_ivt_equipment_list_line_item AS child_eqlitem
+             WHERE child_eqlitem.parent_item_id = eqlitem.id) > 0) -- include all others containing child line items 
+     AND eqlitem.prep_quantity >= nums.num -- multiply by quantity for non-serial
+     AND IFNULL((SELECT biz_cf_value.storage_string
+                           FROM st_biz_resource_custom_field_value AS cf_value
+                           LEFT JOIN st_biz_custom_field_value AS biz_cf_value ON (cf_value.id = biz_cf_value.id)
+                           LEFT JOIN st_biz_custom_field_def AS cf_def ON (cf_def.id = biz_cf_value.custom_field_def_id)
+                           WHERE cf_value.resource_id = ivt_item.id
+                             AND cf_def.field_id='exclude_from_case_labels'),'false') = 'false' -- exclude models set to exclude_from_case_labels via custom field
+   ) AS label
+CROSS JOIN ((SELECT installed_rank num from schema_version)) nums2 on nums2.num <= $P{case_label_copies} /* generate numbers list with numbers from 1 to count of rh_images (plenty but not too many records) */
+WHERE $P{case_label_copies} >= nums2.num -- multiply as defined by 
+
+HAVING CASE WHEN  $P{PRINT_ORPHAN_LABELS} = 'true' THEN 1 ELSE list_count > 0 END
+
+
+ORDER by ordinal ASC]]></query>
+	<field name="line_item_id" class="java.lang.String"/>
+	<field name="top_level_item" class="java.lang.Integer"/>
+	<field name="name_singular" class="java.lang.String">
+		<description><![CDATA[]]></description>
+		<property name="com.jaspersoft.studio.field.name" value="name_singular"/>
+		<property name="com.jaspersoft.studio.field.label" value="name_singular"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_element_definition"/>
+	</field>
+	<field name="element_name" class="java.lang.String">
+		<description><![CDATA[]]></description>
+		<property name="com.jaspersoft.studio.field.name" value="element_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="element_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_project_element"/>
+	</field>
+	<field name="document_number" class="java.lang.String">
+		<description><![CDATA[]]></description>
+		<property name="com.jaspersoft.studio.field.name" value="document_number"/>
+		<property name="com.jaspersoft.studio.field.label" value="document_number"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_project_element"/>
+	</field>
+	<field name="description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="resource_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_managed_resource"/>
+	</field>
+	<field name="parentDescription" class="java.lang.String"/>
+	<field name="case_bar_code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="bar_code_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="case_bar_code"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_managed_resource"/>
+	</field>
+	<field name="stencil" class="java.lang.String">
+		<description><![CDATA[]]></description>
+		<property name="com.jaspersoft.studio.field.name" value="stencil"/>
+		<property name="com.jaspersoft.studio.field.label" value="stencil"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_ivt_serial_number"/>
+	</field>
+	<field name="clientCaption" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="client_caption"/>
+		<property name="com.jaspersoft.studio.field.label" value="clientCaption"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_element_definition"/>
+	</field>
+	<field name="client_company" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="company"/>
+		<property name="com.jaspersoft.studio.field.label" value="client_company"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_crm_contact"/>
+	</field>
+	<field name="venueCaption" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="venue_caption"/>
+		<property name="com.jaspersoft.studio.field.label" value="venueCaption"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_element_definition"/>
+	</field>
+	<field name="venue_company" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="company"/>
+		<property name="com.jaspersoft.studio.field.label" value="venue_company"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_crm_contact"/>
+	</field>
+	<field name="planned_start_date_caption" class="java.lang.String">
+		<description><![CDATA[]]></description>
+		<property name="com.jaspersoft.studio.field.name" value="planned_start_date_caption"/>
+		<property name="com.jaspersoft.studio.field.label" value="planned_start_date_caption"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_element_definition"/>
+	</field>
+	<field name="planned_start_date" class="java.sql.Timestamp">
+		<description><![CDATA[]]></description>
+		<property name="com.jaspersoft.studio.field.name" value="planned_start_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="planned_start_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_project_element"/>
+	</field>
+	<field name="planned_end_date_caption" class="java.lang.String">
+		<description><![CDATA[]]></description>
+		<property name="com.jaspersoft.studio.field.name" value="planned_end_date_caption"/>
+		<property name="com.jaspersoft.studio.field.label" value="planned_end_date_caption"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_element_definition"/>
+	</field>
+	<field name="planned_end_date" class="java.sql.Timestamp">
+		<description><![CDATA[]]></description>
+		<property name="com.jaspersoft.studio.field.name" value="planned_end_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="planned_end_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_prj_project_element"/>
+	</field>
+	<field name="list_count" class="java.lang.Integer"/>
+	<field name="long_list" class="java.lang.Integer"/>
+	<field name="consolidated_weight" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="consolidated_weight"/>
+		<property name="com.jaspersoft.studio.field.label" value="consolidated_weight"/>
+	</field>
+	<field name="w_unit" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="abbreviation"/>
+		<property name="com.jaspersoft.studio.field.label" value="w_unit"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_unit_of_measure"/>
+	</field>
+	<field name="web_site" class="java.lang.String">
+		<description><![CDATA[]]></description>
+		<property name="com.jaspersoft.studio.field.name" value="web_site"/>
+		<property name="com.jaspersoft.studio.field.label" value="web_site"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_corp_identity"/>
+	</field>
+	<field name="corp_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="company_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="corp_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_corp_identity"/>
+	</field>
+	<field name="corp_phone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dial_number"/>
+		<property name="com.jaspersoft.studio.field.label" value="corp_phone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_loc_phone"/>
+	</field>
+	<field name="corp_email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="address_url"/>
+		<property name="com.jaspersoft.studio.field.label" value="corp_email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_loc_inet_addr"/>
+	</field>
+	<field name="biz_loc_addr" class="java.lang.String"/>
+	<field name="time_zone" class="java.lang.String">
+		<description><![CDATA[]]></description>
+		<property name="com.jaspersoft.studio.field.name" value="time_zone"/>
+		<property name="com.jaspersoft.studio.field.label" value="time_zone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_biz_location"/>
+	</field>
+	<field name="client_override" class="java.lang.String"/>
+	<field name="venue_override" class="java.lang.String"/>
+	<field name="note_text" class="java.lang.String"/>
+	<field name="blobhandle" class="java.io.InputStream">
+		<property name="com.jaspersoft.studio.field.name" value="blobhandle"/>
+		<property name="com.jaspersoft.studio.field.label" value="blobhandle"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rh_images"/>
+	</field>
+	<variable name="DateTimeFormatter" class="java.text.DateFormat">
+		<expression><![CDATA[$P{REPORT_FORMAT_FACTORY}.createDateFormat("dd/MM/yy ",$P{REPORT_LOCALE}, TimeZone.getTimeZone($F{time_zone}))]]></expression>
+	</variable>
+	<variable name="Case_count" calculation="DistinctCount" class="java.lang.Integer">
+		<expression><![CDATA[$F{top_level_item} == 1 ? $V{REPORT_COUNT} : null]]></expression>
+	</variable>
+	<variable name="CaseNameFontSize" class="java.lang.String">
+		<expression><![CDATA[new Integer(Math.min(((int)(Math.floor(370 / (new Double((new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",1,16)).stringWidth($F{description})))/16)))),(int)22)).toString()]]></expression>
+	</variable>
+	<group name="parentCase">
+		<expression><![CDATA[$F{parentDescription}]]></expression>
+	</group>
+	<background height="283">
+		<element kind="frame" uuid="dcd0bb54-8cde-41f5-8cf3-7c8c2f2dde79" x="12" y="251" width="81" height="21">
+			<property name="ShowOutOfBoundContent" value="true"/>
+			<element kind="component" uuid="749ad387-86c1-4913-b4ef-d5b91881ec60" x="0" y="0" width="81" height="21">
+				<component kind="list" printOrder="Vertical">
+					<datasetRun uuid="d886ed4f-da00-4bf9-8c58-eda9407f35f1" subDataset="Logo">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<contents height="21" width="81">
+						<element kind="image" uuid="46cfec4d-bc48-4289-8ace-fe596ae792e5" x="0" y="0" width="81" height="21" scaleImage="RetainShape" onErrorType="Blank" usingCache="true" lazy="true" hImageAlign="Center" vImageAlign="Middle">
+							<expression><![CDATA[$F{blobhandle}]]></expression>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.y" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+					</contents>
+				</component>
+			</element>
+		</element>
+	</background>
+	<title height="283">
+		<element kind="component" uuid="7956a1a9-be80-420c-b641-52fb8db2639b" x="0" y="0" width="425" height="283" removeLineWhenBlank="true">
+			<printWhenExpression><![CDATA[$P{case_barcode} == null || $P{case_barcode}.trim().equals("")]]></printWhenExpression>
+			<component kind="list" printOrder="Vertical">
+				<datasetRun uuid="7740ec12-f24e-4b3c-a6a3-becade30210d" subDataset="ManifestLabels">
+					<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				</datasetRun>
+				<contents height="283" width="425">
+					<element kind="textField" uuid="eefdb3ab-520f-462e-a1dd-d9a587b09285" x="10" y="10" width="100" height="12" bold="true">
+						<expression><![CDATA[$F{name_singular}.toUpperCase() + ":"]]></expression>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</element>
+					<element kind="textField" uuid="c7f0f7d7-6ee9-420c-b407-50185bb2e344" x="10" y="38" width="100" height="12" bold="true">
+						<expression><![CDATA[$F{clientCaption}.toUpperCase() + " / JOB:"]]></expression>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="textField" uuid="bd70d542-caba-4238-b8f0-9719e7b8bc66" x="10" y="95" width="100" height="12" bold="true">
+						<expression><![CDATA[$F{venueCaption}.toUpperCase() + ":"]]></expression>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="staticText" uuid="9471056f-13af-4711-885c-167b5461b60e" x="10" y="165" width="100" height="12" bold="true">
+						<text><![CDATA[NOTES:]]></text>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="textField" uuid="d4351a4f-3a49-4cb8-84ee-6b1aa115ef4a" x="10" y="235" width="100" height="12" bold="true">
+						<expression><![CDATA[$F{planned_start_date_caption}.toUpperCase() + ":"]]></expression>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</element>
+					<element kind="textField" uuid="25fca19c-69d8-4ad8-a369-d3fd973e9420" x="216" y="235" width="100" height="12" bold="true">
+						<expression><![CDATA[$F{planned_end_date_caption}.toUpperCase() + ":"]]></expression>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</element>
+					<element kind="line" uuid="6c10530b-e87e-4df3-bffe-e9f84cb8e603" x="7" y="35" width="411" height="1">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<pen lineWidth="0.5"/>
+					</element>
+					<element kind="line" uuid="86a11803-5838-498a-911c-b911b037f76a" x="7" y="92" width="411" height="1">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<pen lineWidth="0.5"/>
+					</element>
+					<element kind="line" uuid="69b5b901-cd4f-491d-8578-036ce24ee253" x="7" y="162" width="411" height="1">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<pen lineWidth="0.5"/>
+					</element>
+					<element kind="line" uuid="38811f7e-c5ed-48bd-9f83-b8b3ee1df007" x="7" y="233" width="411" height="1">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<pen lineWidth="0.5"/>
+					</element>
+					<element kind="line" uuid="f87b4e11-1694-4d1a-b152-9b704700d27c" x="7" y="248" width="411" height="1">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<pen lineWidth="0.5"/>
+					</element>
+					<element kind="line" uuid="f6636ad0-a9ae-4734-a87b-529a4423dad8" x="212" y="233" width="1" height="15">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<pen lineWidth="0.5"/>
+					</element>
+					<element kind="textField" uuid="9248ede8-aee9-4d73-8b20-0899194a20aa" x="10" y="22" width="405" height="12" printWhenDetailOverflows="true" bold="false" hTextAlign="Left" style="ElementName">
+						<expression><![CDATA[$F{element_name}]]></expression>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="textField" uuid="cc0b0b5e-e457-4d74-96fb-3836378dd353" x="330" y="10" width="58" height="12" bold="true" hTextAlign="Right">
+						<expression><![CDATA[$F{document_number}]]></expression>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</element>
+					<element kind="textField" uuid="70d509e0-99c8-40c4-bcb9-d67bb6a35670" x="10" y="51" width="405" height="42" printWhenDetailOverflows="true" bold="false" vTextAlign="Top" style="ElementName">
+						<paragraph lineSpacing="Proportional" lineSpacingSize="1.3" style="ElementName"/>
+						<expression><![CDATA[$F{client_override}.equals("") ? $F{client_company} : $F{client_override}]]></expression>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="textField" uuid="e5439183-1ce4-466f-87cc-676ba69e8442" x="10" y="108" width="405" height="55" printWhenDetailOverflows="true" bold="false" vTextAlign="Top" style="ElementName">
+						<paragraph lineSpacing="Proportional" lineSpacingSize="1.3" style="ElementName"/>
+						<expression><![CDATA[$F{venue_override}.equals("") ? $F{venue_company} : $F{venue_override}]]></expression>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="textField" uuid="b812e271-4f36-41f4-8f97-0ac502bbb20e" x="10" y="178" width="405" height="51" printWhenDetailOverflows="true" bold="false" vTextAlign="Top" style="ElementName">
+						<paragraph lineSpacing="Proportional" lineSpacingSize="1.4" style="ElementName"/>
+						<expression><![CDATA[$F{notes}]]></expression>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</element>
+					<element kind="textField" uuid="4e2ece90-5781-4323-bcef-00d64f358696" x="119" y="235" width="90" height="12" bold="false">
+						<expression><![CDATA[$F{planned_start_date}]]></expression>
+						<patternExpression><![CDATA[$P{DATE_FORMAT}]]></patternExpression>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</element>
+					<element kind="textField" uuid="8eec9907-2b95-4003-b96a-f90313aaf153" x="324" y="235" width="90" height="12" bold="false">
+						<expression><![CDATA[$F{planned_end_date}]]></expression>
+						<patternExpression><![CDATA[$P{DATE_FORMAT}]]></patternExpression>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</element>
+					<element kind="component" uuid="10537091-e43f-490f-a0bf-230a788cb539" x="325" y="9" width="98" height="16" style="Barcode">
+						<component kind="barbecue" type="Code128" drawText="false" checksumRequired="false" barWidth="2" barHeight="30">
+							<codeExpression><![CDATA[$F{document_number}]]></codeExpression>
+						</component>
+						<property name="com.jaspersoft.studio.unit.barWidth" value="px"/>
+						<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
+						<property name="net.sf.jasperreports.style.hImageAlign" value="Right"/>
+						<property name="net.sf.jasperreports.style.hTextAlign" value="Right"/>
+					</element>
+					<element kind="textField" uuid="edc2f19d-6f2e-4827-a353-e784f502375b" x="325" y="23" width="98" height="12" bold="true" hTextAlign="Center">
+						<expression><![CDATA[$F{document_number}]]></expression>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</element>
+					<element kind="rectangle" uuid="d45767da-f37c-4794-bdc2-ab96499cad5b" mode="Transparent" x="7" y="7" width="411" height="269" radius="3">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<pen lineWidth="1.0"/>
+					</element>
+					<element kind="textField" uuid="33130b42-fed3-4f16-83fe-6b28157752eb" x="81" y="251" width="179" height="21" forecolor="#000000" fontSize="9.0" bold="false" vTextAlign="Middle">
+						<expression><![CDATA[$F{biz_loc_addr} + "\n" + $F{corp_phone} + ($F{web_site} != null ?  " - " + $F{web_site} : "")]]></expression>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</element>
+					<element kind="image" uuid="fb82b1e7-6722-494f-b443-bb7cc9e7711d" x="10" y="251" width="70" height="21" hImageAlign="Center" vImageAlign="Middle">
+						<expression><![CDATA[$F{logo_image_blob}]]></expression>
+					</element>
+				</contents>
+			</component>
+			<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+	</title>
+	<detail>
+		<band height="283" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{case_barcode} == null || $P{case_barcode}.trim().equals("") ? new Integer($P{case_label_copies}) > 0 : $P{case_barcode}.equals($F{case_bar_code})]]></printWhenExpression>
+			<element kind="component" uuid="3813d81e-46a0-4e78-9004-4ac548fd8abf" x="325" y="9" width="98" height="16" style="Barcode">
+				<component kind="barbecue" type="Code128" drawText="false" checksumRequired="false" barWidth="2" barHeight="30">
+					<codeExpression><![CDATA[$F{case_bar_code}]]></codeExpression>
+				</component>
+				<property name="com.jaspersoft.studio.unit.barWidth" value="px"/>
+				<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
+				<property name="net.sf.jasperreports.style.hImageAlign" value="Right"/>
+				<property name="net.sf.jasperreports.style.hTextAlign" value="Right"/>
+			</element>
+			<element kind="component" uuid="97b4a239-a008-43b0-84a0-386d0e0cd358" x="325" y="177" width="98" height="16" style="Barcode">
+				<component kind="barbecue" type="Code128" drawText="false" checksumRequired="false" barWidth="2" barHeight="30">
+					<codeExpression><![CDATA[$F{document_number}]]></codeExpression>
+				</component>
+				<property name="com.jaspersoft.studio.unit.barWidth" value="px"/>
+				<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
+				<property name="net.sf.jasperreports.style.hImageAlign" value="Right"/>
+				<property name="net.sf.jasperreports.style.hTextAlign" value="Right"/>
+			</element>
+			<element kind="rectangle" uuid="93ee83e8-565f-4b63-be58-14bb5e598a24" mode="Transparent" x="7" y="7" width="411" height="269" radius="3">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<pen lineWidth="1.0"/>
+			</element>
+			<element kind="textField" uuid="7a12b106-509f-4157-a5a3-b1eb942dd4fc" x="10" y="206" width="90" height="12" bold="true">
+				<expression><![CDATA[$F{clientCaption}.toUpperCase() + ":"]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="b2411c5d-9ed7-435b-b4e1-7b709e58d75c" x="217" y="206" width="100" height="12" bold="true">
+				<expression><![CDATA[$F{venueCaption}.toUpperCase() + ":"]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="ba19d4a9-4fba-4154-95b4-33c31337e30d" x="10" y="235" width="70" height="12" bold="true">
+				<expression><![CDATA[$F{planned_start_date_caption}.toUpperCase() + ":"]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="2299b722-77f1-45b3-94fe-2c762cb73644" x="136" y="235" width="90" height="12" bold="true">
+				<expression><![CDATA[$F{planned_end_date_caption}.toUpperCase() + ":"]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="textField" uuid="0902cace-a195-4500-b18c-0c1aa73f4bd1" x="81" y="251" width="179" height="21" forecolor="#000000" fontSize="9.0" bold="false" vTextAlign="Middle">
+				<expression><![CDATA[$F{biz_loc_addr} != null ? $F{biz_loc_addr} : " " + "\n" + $F{corp_phone} != null ? $F{corp_phone} : " " + ($F{web_site} != null ?  " - " + $F{web_site} : "")]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="line" uuid="0abb4a42-8c06-43f5-bc06-ae47b22d7e3a" x="7" y="35" width="411" height="1">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<pen lineWidth="0.5"/>
+			</element>
+			<element kind="line" uuid="9fa9ab99-b904-41c2-9495-1d0960dd8691" x="7" y="175" width="411" height="1">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<pen lineWidth="0.5"/>
+			</element>
+			<element kind="line" uuid="6d53c606-293a-4053-a730-a0d0d39a2f4f" x="7" y="204" width="411" height="1">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<pen lineWidth="0.5"/>
+			</element>
+			<element kind="line" uuid="2b2905dc-fe9a-448e-8467-ef8e39daef2f" x="7" y="233" width="411" height="1">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<pen lineWidth="0.5"/>
+			</element>
+			<element kind="line" uuid="0d727cbc-6687-47c7-8098-9c77620c5274" x="7" y="248" width="411" height="1">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<pen lineWidth="0.5"/>
+			</element>
+			<element kind="line" uuid="78ea300d-6794-4bab-8d92-34a03a376260" x="273" y="233" width="1" height="43">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<pen lineWidth="0.5"/>
+			</element>
+			<element kind="textField" uuid="241e7753-9078-4995-8abf-7667ece47a0a" x="10" y="176" width="307" height="28" markup="styled" printWhenDetailOverflows="true" hTextAlign="Left" vTextAlign="Middle" style="CaseName">
+				<expression><![CDATA["<font size=\"" + new Integer(Math.min(((int)(Math.floor(307 / (new Double((new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",1,16)).stringWidth($F{element_name})-3))/16)))),(int)20)).toString() +"\">" + $F{element_name}.replaceAll("&","&amp;") + "</font>"]]></expression>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="0c529caf-9ad5-4a65-9644-dff10e6e43be" x="10" y="219" width="189" height="13" printWhenDetailOverflows="true" bold="false" vTextAlign="Top">
+				<paragraph lineSpacing="Proportional" lineSpacingSize="1.4"/>
+				<expression><![CDATA[$F{client_override}.equals("") ? $F{client_company} : $F{client_override}]]></expression>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="eb9e3c4e-d30b-4695-ad3b-252911f76f07" x="217" y="219" width="198" height="13" printWhenDetailOverflows="true" bold="false" vTextAlign="Top">
+				<paragraph lineSpacing="Proportional" lineSpacingSize="1.4"/>
+				<expression><![CDATA[$F{venue_override}.equals("") ? $F{venue_company} : $F{venue_override}]]></expression>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="c9d62076-b2be-4457-b322-2cee5e4ff57c" x="81" y="235" width="50" height="12" bold="false">
+				<expression><![CDATA[$F{planned_start_date}]]></expression>
+				<patternExpression><![CDATA[$P{DATE_FORMAT}]]></patternExpression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="cbeee87f-c5a8-4787-b6df-b225c4ad1ce6" x="223" y="235" width="50" height="12" bold="false">
+				<expression><![CDATA[$F{planned_end_date}]]></expression>
+				<patternExpression><![CDATA[$P{DATE_FORMAT}]]></patternExpression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="line" uuid="023cbcb0-fe61-40cb-bf23-a4f38b5fa8d8" x="212" y="204" width="1" height="29">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<pen lineWidth="0.5"/>
+			</element>
+			<element kind="textField" uuid="fc00f696-873f-457d-ba82-0dd79ce2a4e6" x="277" y="235" width="70" height="12" bold="true">
+				<expression><![CDATA["WEIGHT:"]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="textField" uuid="4c6e0155-da4c-443a-97e9-6f7824676900" x="330" y="235" width="54" height="12" bold="false" hTextAlign="Right">
+				<expression><![CDATA[$F{consolidated_weight}]]></expression>
+				<patternExpression><![CDATA["##.# " + $F{w_unit}.toUpperCase()]]></patternExpression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="line" uuid="52d5336f-4564-4713-badb-13a324cb83dc" x="132" y="233" width="1" height="15">
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<pen lineWidth="0.5"/>
+			</element>
+			<element kind="staticText" uuid="3da3307e-48b4-4b70-8e2a-688f3834c132" x="10" y="38" width="100" height="12" bold="true">
+				<text><![CDATA[CONTENTS:]]></text>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="textField" uuid="889f7299-685d-436b-971b-641fb5119325" x="325" y="192" width="98" height="12" bold="true" hTextAlign="Center">
+				<expression><![CDATA[$F{document_number}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="textField" uuid="f1469321-a20c-4e47-aa64-68d09da93355" x="325" y="23" width="98" height="12" bold="true" hTextAlign="Center">
+				<expression><![CDATA[$F{case_bar_code}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="textField" uuid="7cc207f8-0bb9-4442-aff1-2c9e91c8d911" x="10" y="7" width="315" height="28" markup="styled" bold="true" vTextAlign="Middle">
+				<expression><![CDATA["<font size=\"" + $V{CaseNameFontSize} +"\">" + $F{description}.replaceAll("&","&amp;") + "</font>"]]></expression>
+			</element>
+			<element kind="component" uuid="2bf14506-3cd6-477a-a388-c287e9055108" stretchType="ElementGroupHeight" x="7" y="51" width="210" height="2">
+				<printWhenExpression><![CDATA[$F{list_count} > 10]]></printWhenExpression>
+				<component kind="list" printOrder="Vertical">
+					<datasetRun uuid="2e7a101f-d8dd-4c34-b620-a35ff8a7b654" subDataset="Contents">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						<parameter name="LINE_ITEM_ID">
+							<expression><![CDATA[$F{line_item_id}]]></expression>
+						</parameter>
+						<parameter name="list_count">
+							<expression><![CDATA[$F{list_count}]]></expression>
+						</parameter>
+						<parameter name="long_list">
+							<expression><![CDATA[$F{long_list}]]></expression>
+						</parameter>
+					</datasetRun>
+					<contents height="2" width="210">
+						<element kind="textField" uuid="0ee7fc3c-6c44-4c37-917f-1dd35d38960f" x="0" y="0" width="25" height="2" textAdjust="StretchHeight" removeLineWhenBlank="true" hTextAlign="Right" style="Detail">
+							<printWhenExpression><![CDATA[$V{line count} <= java.lang.Math.min($V{line_limit}, 20)]]></printWhenExpression>
+							<expression><![CDATA[$F{qty} + " x "]]></expression>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="textField" uuid="38ec0d7f-c4d1-45df-b17a-b5246f7f04b8" x="28" y="0" width="182" height="2" textAdjust="StretchHeight" removeLineWhenBlank="true" style="Detail">
+							<printWhenExpression><![CDATA[$V{line count} <= java.lang.Math.min($V{line_limit}, 20)]]></printWhenExpression>
+							<expression><![CDATA[$F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))]]></expression>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+					</contents>
+				</component>
+				<property name="com.jaspersoft.studio.unit.CONTENTS.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.CONTENTS.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="component" uuid="936554e5-0e4b-4981-8cbe-a132ea2a908c" stretchType="ElementGroupHeight" x="213" y="51" width="210" height="2">
+				<printWhenExpression><![CDATA[$F{list_count} > 10]]></printWhenExpression>
+				<component kind="list" printOrder="Vertical">
+					<datasetRun uuid="bc6e7b62-99cf-41e7-b858-ef1ca05e1d6d" subDataset="Contents">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						<parameter name="LINE_ITEM_ID">
+							<expression><![CDATA[$F{line_item_id}]]></expression>
+						</parameter>
+						<parameter name="list_count">
+							<expression><![CDATA[$F{list_count}]]></expression>
+						</parameter>
+						<parameter name="long_list">
+							<expression><![CDATA[$F{long_list}]]></expression>
+						</parameter>
+					</datasetRun>
+					<contents height="2" width="210">
+						<element kind="textField" uuid="9b5be2eb-b794-4476-9717-2dff517724ba" x="0" y="0" width="25" height="2" textAdjust="StretchHeight" removeLineWhenBlank="true" hTextAlign="Right" style="Detail">
+							<printWhenExpression><![CDATA[$V{line count} > java.lang.Math.min($V{line_limit}, 20) && $V{line count} < 40]]></printWhenExpression>
+							<expression><![CDATA[$F{qty} + " x "]]></expression>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="textField" uuid="c0acda60-3906-4adf-8b0a-f55647da10b7" x="28" y="0" width="176" height="2" markup="html" textAdjust="StretchHeight" removeLineWhenBlank="true" style="Detail">
+							<printWhenExpression><![CDATA[$V{line count} > java.lang.Math.min($V{line_limit}, 20) && $V{line count} < 41]]></printWhenExpression>
+							<expression><![CDATA[$V{line count} < 40 ? ($F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))) : "<b>Continued...<b>"]]></expression>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+					</contents>
+				</component>
+				<property name="com.jaspersoft.studio.unit.CONTENTS.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.CONTENTS.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="component" uuid="d9a65764-8a50-46a6-8e50-a819462a2421" stretchType="ElementGroupHeight" x="7" y="53" width="400" height="2">
+				<printWhenExpression><![CDATA[$F{list_count} < 11]]></printWhenExpression>
+				<component kind="list" printOrder="Vertical">
+					<datasetRun uuid="41d49bef-58c0-4bb6-8799-8d6bf8b6bf95" subDataset="Contents">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						<parameter name="LINE_ITEM_ID">
+							<expression><![CDATA[$F{line_item_id}]]></expression>
+						</parameter>
+						<parameter name="list_count">
+							<expression><![CDATA[$F{list_count}]]></expression>
+						</parameter>
+						<parameter name="long_list">
+							<expression><![CDATA[$F{long_list}]]></expression>
+						</parameter>
+					</datasetRun>
+					<contents height="2" width="400">
+						<element kind="textField" uuid="779afe2e-8ec0-4ec6-89ae-bb1cac3d36fc" x="0" y="0" width="25" height="2" textAdjust="StretchHeight" removeLineWhenBlank="true" hTextAlign="Right" style="Detail">
+							<expression><![CDATA[$F{qty} + " x "]]></expression>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+						<element kind="textField" uuid="db08a535-cca9-4de3-bc32-816442f18d49" x="28" y="0" width="372" height="2" textAdjust="StretchHeight" removeLineWhenBlank="true" style="Detail">
+							<expression><![CDATA[$F{short_hand} != null && !$F{short_hand}.equals("") ? $F{short_hand} : ($F{resource_name}.trim() + ($F{item_size} == null ? "" : (" (" + $F{item_size}.trim() + ")")))]]></expression>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</element>
+					</contents>
+				</component>
+				<property name="com.jaspersoft.studio.unit.CONTENTS.width" value="px"/>
+				<property name="com.jaspersoft.studio.unit.CONTENTS.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+			</element>
+			<element kind="textField" uuid="e9c5ab6d-d1ea-4959-a138-af53ad05a7ff" mode="Opaque" x="274" y="249" width="144" height="11" forecolor="#FFFFFF" backcolor="#000000" markup="styled" fontSize="8.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
+				<expression><![CDATA["<font size=\"" + new Integer(Math.min(((int)(Math.floor(160 / (new Double((new java.awt.image.BufferedImage(1, 1, java.awt.image.BufferedImage.TYPE_INT_ARGB).createGraphics().getFontMetrics(new java.awt.Font("ArialMT",1,16)).stringWidth($F{parentDescription})))/16)))),(int)8)).toString() +"\">" + $F{parentDescription}.replaceAll("&","&amp;") + "</font>"]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="frame" uuid="b2c1c907-d26c-4f4a-a867-a0e150a25883" x="277" y="256" width="138" height="18">
+				<printWhenExpression><![CDATA[false]]></printWhenExpression>
+				<element kind="textField" uuid="d0780373-be59-43e2-881c-1687585bab07" x="0" y="0" width="53" height="12" bold="true">
+					<printWhenExpression><![CDATA[$F{top_level_item} == 1]]></printWhenExpression>
+					<expression><![CDATA["CASE #:"]]></expression>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</element>
+				<element kind="textField" uuid="a3693240-48ea-49bf-b28b-90f0b00d66f0" x="61" y="0" width="37" height="12" bold="false" hTextAlign="Right">
+					<printWhenExpression><![CDATA[$F{top_level_item} == 1]]></printWhenExpression>
+					<expression><![CDATA[$V{Case_count} + " OF "]]></expression>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</element>
+				<element kind="textField" uuid="9c48ab13-6f9f-4521-a640-f5fe733ced14" x="101" y="0" width="37" height="12" evaluationTime="Report" bold="false" hTextAlign="Left">
+					<printWhenExpression><![CDATA[$F{top_level_item} == 1]]></printWhenExpression>
+					<expression><![CDATA[$V{Case_count}]]></expression>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</element>
+				<element kind="textField" uuid="412975de-b00f-40d6-ade0-e2c5071a45ba" x="71" y="6" width="37" height="12" bold="false" hTextAlign="Right">
+					<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
+					<expression><![CDATA[$V{parentCase_COUNT} + " OF "]]></expression>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</element>
+				<element kind="textField" uuid="36241b89-01c1-44f6-bff6-a4a022bf4a59" x="111" y="6" width="27" height="12" evaluationTime="Auto" bold="false" hTextAlign="Left">
+					<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
+					<expression><![CDATA[$V{parentCase_COUNT}]]></expression>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</element>
+				<element kind="textField" uuid="ba15c1ae-e4ed-4640-b5f5-703ab8f79f75" x="0" y="6" width="83" height="12" bold="true">
+					<printWhenExpression><![CDATA[$F{top_level_item} != 1]]></printWhenExpression>
+					<expression><![CDATA["INNER CASE #:"]]></expression>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</element>
+			</element>
+			<element kind="image" uuid="ac786504-aa35-4ee5-b2ee-b89052fb4f3c" x="10" y="251" width="70" height="21" hImageAlign="Center" vImageAlign="Middle">
+				<expression><![CDATA[$F{blobhandle}]]></expression>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+</jasperReport>
